@@ -1,6 +1,6 @@
 import xarray as xr
 
-from pcv.process import standardise_monthly, detrend
+from pcv.process import standardise_monthly, detrend, aggregate_seasons
 import matplotlib.pylab as plt
 
 temperature_path = "/Users/anand/Documents/data/project_3_data/t2m.monthly.era5.europe.1981-2020.nc"
@@ -22,3 +22,8 @@ standardised_temp.t2m[:,100,100].plot()
 plt.savefig('scratch_2.png')
 plt.close()
 
+aggregated_temp = aggregate_seasons(standardised_temp)
+
+aggregated_temp.t2m[:,100, 100].plot()
+plt.savefig('scratch_3.png')
+plt.close()

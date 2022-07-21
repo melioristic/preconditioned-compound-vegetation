@@ -73,7 +73,13 @@ def standardise_monthly(data:xr.Dataset, var:str)->xr.Dataset:
     
     return standardised_data
 
-def detrend(data:xr.Dataset, deg:int, var)->xr.Dataset:
+def detrend(data:xr.Dataset, deg:int, var:str)->xr.Dataset:
     p = data.polyfit(dim="time", deg=deg)
     fit = xr.polyval(data["time"], p[var+"_polyfit_coefficients"])
     return data - fit
+
+def aggregate_seasons(data:xr.Dataset, var="t2m")->xr.Dataset:
+    aggregate = data.resample({"time":"QS-DEC"}).sum()
+    return aggregate
+
+
