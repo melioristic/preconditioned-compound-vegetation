@@ -44,49 +44,62 @@ for (var_name in var_names) {
       year = lubridate::year(date),
       month = lubridate::month(date)
     ) %>%
-    group_by(x, y, month) %>%
+    #main processing steps
+    group_by(x, y) %>%
     nest() %>%
     mutate(model_trend = map(data,  ~ lm(value ~ year, data = .))) %>%
     mutate(augment_trend  = map(model_trend,  ~ broom::augment(.))) %>%
     mutate(date  = map(data,  ~ .$date)) %>%
     unnest(cols = c(augment_trend, date)) %>%
     ungroup() %>%
-    dplyr::select(x, y, year, month, .resid, date) %>%
+    dplyr::select(x, y,.resid,data) %>%
+    unnest(cols = c(data)) %>%
     group_by(x, y, month) %>%
-    mutate_at(vars(-year, -x, -y, -month, -date),
+    mutate_at(vars(.resid),
               ~ scale(., center = TRUE, scale = TRUE)) %>%
     ungroup()
-  
 }
+
 #==============================
+#==============================
+#==============================
+#==============================
+#FOR EXPLAINING
 #vector of variable names
-var_names <- c("t2m")
+var_name <- c("t2m")
 #example list
 example_test <- var_list
+#give subsample coordinates
+x_min <-25
+x_max <-30
+y_min <-35
+y_max <-40
 #create example test
-example_test[[match(var_name, var_names)]] <-
+example_test[[match(var_name,var_names)]] <-
   list.files(dir_climate, var_name, full.names = TRUE) %>%
   brick() %>%
   rasterToPoints() %>%
   as_tibble() %>%
   rename_all(~ (str_replace(., "X", ""))) %>%
-  pivot_longer(cols = -c(x, y))
+  pivot_longer(cols = -c(x, y)) %>% 
+  filter(x > x_min & x < x_max & y > y_min & y < y_max)
 
 #run code over subsample
-example_subset <-example_test$t2m[1:10000,] %>% 
+example_subset <-example_test$t2m %>% 
   mutate(
     date = lubridate::ymd(as.character(name)),
     year = lubridate::year(date),
     month = lubridate::month(date)
   ) %>%
-  group_by(x, y, month) %>%
+  group_by(x, y) %>%
   nest() %>%
   mutate(model_trend = map(data,  ~ lm(value ~ year, data = .))) %>%
   mutate(augment_trend  = map(model_trend,  ~ broom::augment(.))) %>%
   mutate(date  = map(data,  ~ .$date)) %>%
   unnest(cols = c(augment_trend, date)) %>%
   ungroup() %>%
-  dplyr::select(x, y, year, month, .resid, date) %>%
+  dplyr::select(x, y,.resid,data) %>%
+  unnest(cols = c(data)) %>%
   group_by(x, y, month) %>%
   mutate_at(vars(.resid),
             ~ scale(., center = TRUE, scale = TRUE)) %>%
