@@ -6,10 +6,9 @@
 
 # Script for function to process the data
 
-
-from calendar import month, month_abbr
 import numpy as np
 import xarray as xr
+from pcv.misc import timeit
 
 def comp_area_lat_lon(lat:np.array,lon:np.array)->np.array:
     """Calculate the area between an array of lat lons
@@ -55,7 +54,7 @@ def comp_area_lat_lon(lat:np.array,lon:np.array)->np.array:
 
     return area
 
-
+@timeit
 def standardise_monthly(data:xr.Dataset, var:str)->xr.Dataset:
     """Function standardises the `var` in the xarray `data`. This typically means subtracting the mean and dividing it by standard deviation of the data. The function does it at a monthly scale
 
@@ -72,3 +71,8 @@ def standardise_monthly(data:xr.Dataset, var:str)->xr.Dataset:
     standardised_data = (data.groupby('time.month') - month_mean).groupby('time.month') / month_std 
     
     return standardised_data
+
+def detrend(data:xr.Dataset, deg:int, var)->xr.Dataset:
+    p = data.polyfit(dim="time", deg=deg)
+    fit = xr.polyval(data["time"], p[var+"_polyfit_coefficients"])
+    return data - fit
