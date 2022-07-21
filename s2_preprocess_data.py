@@ -1,5 +1,5 @@
 import xarray as xr
-from pcv.process import standardise_data
+from pcv.process import standardise_monthly
 import matplotlib.pylab as plt
 
 
@@ -14,7 +14,7 @@ temp_data.t2m[:,100,100].plot()
 plt.savefig('scratch_1.png')
 plt.close()
 
-standardised_temp = standardise_data(temp_data)
+standardised_temp = standardise_monthly(temp_data, "t2m")
 
 print(standardised_temp.keys())
 standardised_temp.t2m[:,100,100].plot()
