@@ -1,6 +1,27 @@
+#
+# Created on Thu Jul 21 2022
+#
+# Copyright (c) 2022 Your Company
+#
 
-def comp_area_lat_lon(lat,lon):
-    import numpy as np
+# Script for function to process the data
+
+
+from calendar import month, month_abbr
+import numpy as np
+import xarray as xr
+
+def comp_area_lat_lon(lat:np.array,lon:np.array)->np.array:
+    """Calculate the area between an array of lat lons
+
+    Args:
+        lat (np.array): Array of latitudes
+        lon (np.array): Array of longitudes
+
+    Returns:
+        np.array: Area 
+    """
+
 
     radius = 6.37122e6 # in meters
 
@@ -33,3 +54,21 @@ def comp_area_lat_lon(lat,lon):
         area=-1*area
 
     return area
+
+
+def standardise_monthly(data:xr.Dataset, var:str)->xr.Dataset:
+    """Function standardises the `var` in the xarray `data`. This typically means subtracting the mean and dividing it by standard deviation of the data. The function does it at a monthly scale
+
+    Args:
+        data (xr.Dataset): The xarray dataset to be standardised
+        var (str): The name of the variable to be standarised in the data.
+
+    Returns:
+        xr.Dataset: Monthly standardised data
+    """
+    month_mean=data.groupby('time.month').mean("time")
+    month_std=data.groupby('time.month').std("time")
+    
+    standardised_data = (data.groupby('time.month') - month_mean).groupby('time.month') / month_std 
+    
+    return standardised_data

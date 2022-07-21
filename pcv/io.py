@@ -9,8 +9,6 @@ from pcv.process import comp_area_lat_lon
 import xarray as xr
 import numpy as np
 
-import matplotlib.pyplot as plt
-
 def regrid_data(data_path:str, regrid_like_path:str)->xr.Dataset:
     
     """The function regrids the data at `data_path` to the same latitude and longitude as `regrid_like_path`. The regrid_like_path data should have latitude and longitude fields. The data path should have lat and lon fields. The function is only tested with nc files The function is based on linear interpolation. This messes up the majority class and hence are deleted. 
