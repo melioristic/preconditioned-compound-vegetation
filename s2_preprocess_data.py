@@ -3,8 +3,6 @@ from pcv.process import standardise_monthly
 import matplotlib.pylab as plt
 
 
-
-
 temperature_path = "/Users/anand/Documents/data/project_3_data/t2m.monthly.era5.europe.1981-2020.nc"
 
 
