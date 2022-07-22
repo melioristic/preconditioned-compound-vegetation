@@ -55,7 +55,7 @@ def comp_area_lat_lon(lat:np.array,lon:np.array)->np.array:
     return area
 
 
-def standardise_monthly(data:xr.Dataset, var:str)->xr.Dataset:
+def standardise_monthly(data:xr.Dataset)->xr.Dataset:
     """Function standardises the `var` in the xarray `data`. This typically means subtracting the mean and dividing it by standard deviation of the data. The function does it at a monthly scale
 
     Args:

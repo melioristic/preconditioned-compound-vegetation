@@ -19,6 +19,5 @@ aggregated_tp = aggregate_seasons(standardised_tp)
 
 temp_winter = select_data(aggregated_temp, "t2m", "winter")
 tp_summer = select_data(aggregated_tp, "tp", "summer")
+tp_winter = select_data(aggregated_tp, "tp", "winter")
 
-print(temp_winter)
-print(tp_summer)
