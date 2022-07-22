@@ -55,7 +55,6 @@ def comp_area_lat_lon(lat:np.array,lon:np.array)->np.array:
     return area
 
 
-@timeit
 def standardise_monthly(data:xr.Dataset, var:str)->xr.Dataset:
     """Function standardises the `var` in the xarray `data`. This typically means subtracting the mean and dividing it by standard deviation of the data. The function does it at a monthly scale
 
@@ -73,7 +72,30 @@ def standardise_monthly(data:xr.Dataset, var:str)->xr.Dataset:
     
     return standardised_data
 
-def detrend(data:xr.Dataset, deg:int, var)->xr.Dataset:
+@timeit
+def detrend(data:xr.Dataset, deg:int, var:str)->xr.Dataset:
     p = data.polyfit(dim="time", deg=deg)
     fit = xr.polyval(data["time"], p[var+"_polyfit_coefficients"])
     return data - fit
+
+def aggregate_seasons(data:xr.Dataset, var="t2m")->xr.Dataset:
+    aggregate = data.resample({"time":"QS-DEC"}).sum()
+    return aggregate
+
+def select_data(data:xr.Dataset, var:str, season:str)->xr.Dataset:
+    
+    season_list = ["winter", "spring", "summer", "autumn"]
+    
+    assert season in season_list, "Seasons can only be : winter, spring, summer or autumn"
+    month = -1
+
+    if season == "winter":
+        month=12
+    elif season=="spring":
+        month=3
+    elif season=="summer":
+        month=6
+    elif season=="autumn":
+        month=9
+
+    return data[var].where(data["time.month"]==month, drop=True).sortby("time") 
