@@ -79,7 +79,7 @@ def detrend(data:xr.Dataset, deg:int, var:str)->xr.Dataset:
     return data - fit
 
 def aggregate_seasons(data:xr.Dataset, var="t2m")->xr.Dataset:
-    aggregate = data.resample({"time":"QS-DEC"}).sum()
+    aggregate = data.resample({"time":"QS-DEC"}).mean()
     return aggregate
 
 def select_data(data:xr.Dataset, var:str, season:str)->xr.Dataset:
