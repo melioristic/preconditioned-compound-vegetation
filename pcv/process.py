@@ -75,14 +75,24 @@ def standardise_monthly(data:xr.Dataset)->xr.Dataset:
 @timeit
 def detrend(data:xr.Dataset, deg:int, var:str)->xr.Dataset:
     p = data.polyfit(dim="time", deg=deg)
-    fit = xr.polyval(data["time"], p[var+"_polyfit_coefficients"])
+    fit = xr.polyval(data["time"], p["polyfit_coefficients"])
     return data - fit
+
+def detrend_seasons(data:xr.Dataset, deg:int, var:str)->xr.Dataset:
+
+    data_list = []
+    for month in range(3,13,3):
+        seasonal_data = data[var].where(data["time.month"]==month, drop=True)
+        detrended_season = detrend(seasonal_data, deg, var)
+        data_list.append(detrended_season)
+
+    return xr.concat(data_list, dim="time").sortby("time")
 
 def aggregate_seasons(data:xr.Dataset, var="t2m")->xr.Dataset:
     aggregate = data.resample({"time":"QS-DEC"}).mean()
     return aggregate
 
-def select_data(data:xr.Dataset, var:str, season:str)->xr.Dataset:
+def select_data(data:xr.Dataset, season:str)->xr.Dataset:
     
     season_list = ["winter", "spring", "summer", "autumn"]
     
@@ -98,4 +108,4 @@ def select_data(data:xr.Dataset, var:str, season:str)->xr.Dataset:
     elif season=="autumn":
         month=9
 
-    return data[var].where(data["time.month"]==month, drop=True).sortby("time") 
+    return data.where(data["time.month"]==month, drop=True).sortby("time") 
