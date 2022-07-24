@@ -201,4 +201,7 @@ for lat in range(200):
                     model_data_2.swvlall_spring_to_lai_winter_E[lat, lon] = model.inspect().iloc[9, :].Estimate
                     model_data_2.lai_spring_to_swvlall_spring_E[lat, lon] = model.inspect().iloc[3, :].Estimate
 
-    
+
+model_data_0.to_netcdf("/Users/anand/Documents/data/project_3_data/data/sem_data_0.nc")
+model_data_1.to_netcdf("/Users/anand/Documents/data/project_3_data/data/sem_data_0.nc")
+model_data_2.to_netcdf("/Users/anand/Documents/data/project_3_data/data/sem_data_0.nc")
