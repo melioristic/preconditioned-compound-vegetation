@@ -203,5 +203,5 @@ for lat in range(200):
 
 
 model_data_0.to_netcdf("/Users/anand/Documents/data/project_3_data/data/sem_data_0.nc")
-model_data_1.to_netcdf("/Users/anand/Documents/data/project_3_data/data/sem_data_0.nc")
-model_data_2.to_netcdf("/Users/anand/Documents/data/project_3_data/data/sem_data_0.nc")
+model_data_1.to_netcdf("/Users/anand/Documents/data/project_3_data/data/sem_data_1.nc")
+model_data_2.to_netcdf("/Users/anand/Documents/data/project_3_data/data/sem_data_2.nc")
