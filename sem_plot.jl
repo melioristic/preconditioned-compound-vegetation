@@ -6,6 +6,7 @@ using Colors
 
 
 i = 2
+
 data_path = "/Users/anand/Documents/data/project_3_data/data/"
 sem_data_path = data_path*"sem_data_$i.nc"
 land_use_path = data_path*"regridded_LU_2018.nc"
@@ -79,3 +80,10 @@ cb.ticks = (centers, labels)
 fig
 
 save("images/sem_plot_$i.png", fig)
+
+
+### P_val count
+p_val[ismissing.(p_val)].=9999
+
+count(p_val.<0.05)
+count(p_val.<1)
