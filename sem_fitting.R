@@ -27,7 +27,7 @@ ggsem <- function(fit, layout = "sugiyama") {
   
   #ADJUST PVALUE TO SEE WHEN TO INCL. NODES
   param_edges <- params %>% 
-    filter(op %in% c("=~", "~", "~~"), lhs != rhs, pvalue <= 0.50) %>%
+    filter(op %in% c("=~", "~", "~~"), lhs != rhs, pvalue <= 1) %>%
     transmute(to = lhs,
               from = rhs,
               val = est.std,
@@ -85,7 +85,7 @@ ggsem <- function(fit, layout = "sugiyama") {
     
     #HERE CHANGE NUDE_Y FOR WHERE TO PLOT NAME IN FIGURE
     geom_node_text(aes(label = metric),
-                   nudge_y = .15, hjust = "inward", size =5) +
+                   nudge_y = .15, hjust = "inward", size =3) +
     
     # Node residual 
     # geom_node_text(aes(label = sprintf("%.2f", e)),
@@ -192,7 +192,7 @@ list.files(dir_in,".csv",full.names = TRUE, recursive = TRUE) %>%
 #======================================================================
 model_structure_local <-
   "lai_summer ~ ssrd_summer + temp_summer + lai_spring + swvlall_summer
-                swvlall_summer~ lai_spring + tp_summer + swvlall_spring
+                swvlall_summer~ lai_spring + tp_summer + swvlall_spring+ temp_summer
                 lai_spring ~ ssrd_spring + tp_spring + temp_spring + swvlall_spring
                 "
 #======================================================================
@@ -225,13 +225,13 @@ model_pipe_local <-
                     %>%
                       tibble(.)),
     #loo predictions from sem model
-    sem_pred_loo = map(data,
-                       ~ fun_loo_per_grid(
-                         .x,
-                         model_structure_local
-                       )
-                       %>%
-                         tibble(.)),
+    # sem_pred_loo = map(data,
+    #                    ~ fun_loo_per_grid(
+    #                      .x,
+    #                      model_structure_local
+    #                    )
+    #                    %>%
+    #                      tibble(.)),
     
     #calculate r-square local
     rsq = map(sem_model, ~ inspect(., "rsquare")),
