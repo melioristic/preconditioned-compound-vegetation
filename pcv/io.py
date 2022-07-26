@@ -11,11 +11,11 @@ import numpy as np
 
 def regrid_data(data_path:str, regrid_like_path:str)->xr.Dataset:
     
-    """The function regrids the data at `data_path` to the same latitude and longitude as `regrid_like_path`. The regrid_like_path data should have latitude and longitude fields. The data path should have lat and lon fields. The function is only tested with nc files The function is based on linear interpolation. This messes up the majority class and hence are deleted. 
+    """The function regrids the lai at `data_path` to the same latitude and longitude as `regrid_like_path`. The regrid_like_path lai should have latitude and longitude fields. The lai path should have lat and lon fields. The function is only tested with nc files The function is based on linear interpolation. This messes up the majority class and hence are deleted.
 
     Args:
-        data_path (str): The path of the data to be regridded
-        regrid_like_path (str): The path of data to be regridded like
+        data_path (str): The path of the lai to be regridded
+        regrid_like_path (str): The path of lai to be regridded like
 
     Returns:
         xr.Dataset: _description_

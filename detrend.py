@@ -27,7 +27,7 @@ def createXarrayAsExample(other: xarray.DataArray, new_values: np.ndarray) -> xa
 
 def detrend_pixelwise(data: xarray.DataArray) -> xarray.DataArray:
     """ detrends a lat lon time xarray from its linear variation with time,
-    on every gridpoints independantly. returns the detrended data. """
+    on every gridpoints independantly. returns the detrended lai. """
 
     axis_time = data.get_axis_num(dim='time')
     data_detrended = np.apply_along_axis(func1d=signal.detrend, axis=axis_time, arr=data)
@@ -38,7 +38,7 @@ def detrend_pixelwise(data: xarray.DataArray) -> xarray.DataArray:
 
 
 def visualise_detrending(data: xarray.DataArray, data_detrended: xarray.DataArray):
-    """ visualising the detrending effect on a data and its detrending"""
+    """ visualising the detrending effect on a lai and its detrending"""
     data_detrended = xarray.open_dataset(path_detrend)[var_name]
 
     data_france = data.sel(latitude=slice(55, 42), longitude=slice(0, 10))
@@ -54,7 +54,7 @@ def visualise_detrending(data: xarray.DataArray, data_detrended: xarray.DataArra
     data_france_d_time_serie.plot(), plt.title(f"detrended {var_name} for january 1982 - France"), plt.show()
 
 
-# load the data
+# load the lai
 dir_root = "/home/julie_andre/PycharmProjects/Damocles_Project3/data/"  # depending on your computer
 var_name = "t2m"
 nc_name = var_name + ".monthly.era5.europe.1981-2020.nc"
@@ -69,10 +69,10 @@ tic()
 data_detrended = detrend_pixelwise(data)
 tac()
 
-# saving the data as a ncdf
+# saving the lai as a ncdf
 save = True
 if save:
-    path_detrend = dir_root + var_name + ".monthly.era5.europe.1981-2020_detrended.nc" # path to save the detrend data
+    path_detrend = dir_root + var_name + ".monthly.era5.europe.1981-2020_detrended.nc" # path to save the detrend lai
     data_detrended.to_netcdf(path_detrend)
 
 

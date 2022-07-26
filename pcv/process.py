@@ -4,7 +4,7 @@
 # Copyright (c) 2022 Your Company
 #
 
-# Script for function to process the data
+# Script for function to process the lai
 
 import numpy as np
 import xarray as xr
@@ -57,14 +57,14 @@ def comp_area_lat_lon(lat:np.array,lon:np.array)->np.array:
 
 @timeit
 def standardise_monthly(data:xr.Dataset, var:str)->xr.Dataset:
-    """Function standardises the `var` in the xarray `data`. This typically means subtracting the mean and dividing it by standard deviation of the data. The function does it at a monthly scale
+    """Function standardises the `var` in the xarray `lai`. This typically means subtracting the mean and dividing it by standard deviation of the lai. The function does it at a monthly scale
 
     Args:
         data (xr.Dataset): The xarray dataset to be standardised
-        var (str): The name of the variable to be standarised in the data.
+        var (str): The name of the variable to be standarised in the lai.
 
     Returns:
-        xr.Dataset: Monthly standardised data
+        xr.Dataset: Monthly standardised lai
     """
     month_mean=data.groupby('time.month').mean("time")
     month_std=data.groupby('time.month').std("time")

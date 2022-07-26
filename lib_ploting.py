@@ -15,11 +15,11 @@ def plotMap_withBorders(map_to_plot: xarray.DataArray,
                         region_extend: Union[str, List[float]] = "the whole domain",
                         plot_gridlines_labels: bool = False,
                         *args, **kwargs):
-    """ plot a my_map of Spain with countries border on top. The data comes from a xarray my_map in lat lon.
+    """ plot a my_map of Spain with countries border on top. The lai comes from a xarray my_map in lat lon.
     :param map_to_plot: a xarray of dim latitude, longitude.
     :param ax: the ax on which to plot, if subplot
     :param title: the title of the plot
-    :param vmax: max value for the colormap and colorbar. If None, then the max value of the data is taken.
+    :param vmax: max value for the colormap and colorbar. If None, then the max value of the lai is taken.
     :param vmin: same, with min.
     :param cmap: color this_map
     :param add_colorbar: whether or not to plot the colorbar.

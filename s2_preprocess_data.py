@@ -3,7 +3,7 @@ import xarray as xr
 from pcv.process import standardise_monthly, detrend
 import matplotlib.pylab as plt
 
-temperature_path = "/Users/anand/Documents/data/project_3_data/t2m.monthly.era5.europe.1981-2020.nc"
+temperature_path = "/Users/anand/Documents/lai/project_3_data/t2m.monthly.era5.europe.1981-2020.nc"
 
 temp_data = xr.open_dataset(temperature_path)
 
