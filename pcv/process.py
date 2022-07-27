@@ -8,7 +8,7 @@
 
 import numpy as np
 import xarray as xr
-from pcv.misc import timeit
+
 
 def comp_area_lat_lon(lat:np.array,lon:np.array)->np.array:
     """Calculate the area between an array of lat lons
@@ -55,9 +55,8 @@ def comp_area_lat_lon(lat:np.array,lon:np.array)->np.array:
     return area
 
 
-@timeit
-def standardise_monthly(data:xr.Dataset, var:str)->xr.Dataset:
-    """Function standardises the `var` in the xarray `lai`. This typically means subtracting the mean and dividing it by standard deviation of the lai. The function does it at a monthly scale
+def standardise_monthly(data:xr.Dataset)->xr.Dataset:
+    """Function standardises the `var` in the xarray data. This typically means subtracting the mean and dividing it by standard deviation of the lai. The function does it at a monthly scale
 
     Args:
         data (xr.Dataset): The xarray dataset to be standardised

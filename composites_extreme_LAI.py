@@ -8,10 +8,15 @@ from matplotlib import pyplot as plt
 
 from lib_ploting import plotMap_withBorders, savefigure
 from lib_xarray import createXarrayAsExample
+from pcv.process import standardise_monthly
+from time_passed import tic, tac
 
-# load lai data
-dir_root = "/home/julie_andre/PycharmProjects/Damocles_Project3/data/data_preprocessed/"  # depending on your computer
+# depending on your computer
+dir_root = "/home/julie_andre/PycharmProjects/Damocles_Project3/data/data_preprocessed/"
+dir_save_nc = "/home/julie_andre/PycharmProjects/Damocles_Project3/generated_data/"
+dir_save_fig = "/home/julie_andre/PycharmProjects/Damocles_Project3/plots/"
 
+# load the data
 var_name_path = "lai"
 var_name = "GLOBMAP_LAI"
 nc_path = f"{dir_root}detrended_{var_name_path}.nc"
@@ -21,7 +26,7 @@ lai = xr.open_dataset(nc_path)[var_name]
 lai_summer = lai.groupby("time.season")["JJA"]
 
 # parameters for selection of extreme LAI years
-N = 5
+N = 5  # nb of extreme years
 extreme_type = "low"
 
 
@@ -72,6 +77,7 @@ def time_indice_to_year(indices_array: np.ndarray, time_serie: np.array) -> np.n
 
     return year_array
 
+
 def plot_year_extreme_summer_LAI(lai_summer: xr.DataArray, extreme_type="low"):
     # extracting the time steps for all lat lon.
     axis_time = 0
@@ -91,31 +97,39 @@ def plot_year_extreme_summer_LAI(lai_summer: xr.DataArray, extreme_type="low"):
     savefigure(path_save_fig)
     plt.show()
 
+
 def mean_climate_for_extreme_LAI(climate_data_1D: np.array, time_steps_indices_1D: np.array) -> float:
     """ computes the mean on the N time steps listed in time_steps_indices_1D, of the values taken in the climate_data_1D"""
-    if only_nans_in(climate_data_1D):
+    if only_nans_in(time_steps_indices_1D):
         return np.nan
 
     values_list = []
     for index in time_steps_indices_1D:
-        print(index)
         if not np.isnan(index):
-            values_list.append(climate_data_1D[index])
+            values_list.append(climate_data_1D[int(index)])
 
     mean_for_extreme = np.mean(values_list)
     return mean_for_extreme
 
-def compute_composite(climate_data:xr.DataArray, time_steps_indices: xr.DataArray):
+
+def compute_composite(climate_data: xr.DataArray, time_steps_indices: xr.DataArray) -> xr.DataArray:
     """ For each lat lon, computes the mean on the N time steps listed in time_steps_indices at those lat lon,
     of the values taken in the climate_data"""
     latitude = climate_data.latitude.values
-    longitude= climate_data.longitude.values
+    longitude = climate_data.longitude.values
+
     composite = createXarrayAsExample(climate_data[0], np.zeros(np.shape(climate_data[0])))
+    time_steps_indices_xr = createXarrayAsExample(climate_data[:len(time_steps_indices)], time_steps_indices)
+
     for lat in latitude:
-        for lon in latitude:
-            print(lat, lon)
+        print(lat)
+        for lon in longitude:
             # todo : complete
-            # composite at lat lon mean of these values
+            climate_data_1D = climate_data.sel(latitude=lat, longitude=lon)
+            time_steps_indices_1D = time_steps_indices_xr.sel(latitude=lat, longitude=lon)
+            mean_value = mean_climate_for_extreme_LAI(climate_data_1D.values, time_steps_indices_1D.values)
+            composite.loc[lat, lon] = mean_value
+    return composite
 
 
 # # try on the French pixel
@@ -144,17 +158,31 @@ time_steps_indices = np.apply_along_axis(func1d=select_time_steps_extreme_values
 ## Mean winter temperature for this 5 years, pointwise
 var_name = "t2m"
 nc_path = f"{dir_root}detrended_{var_name}.nc"
-climate_data = xr.open_dataset(nc_path)[var_name]
+climate_data_absolute = xr.open_dataset(nc_path)[var_name]
+# standardise the data
+climate_data = standardise_monthly(climate_data_absolute)
 
+# select a sub aera just for test
+# climate_data = climate_data.sel(latitude=slice(40, 48), longitude=slice(-8, 0))
+# time_steps_indices = time_steps_indices.sel(latitude=slice(40, 48), longitude=slice(-8, 0))
+
+# select the season
 season = "DJF"
 climate_data_season = climate_data.groupby("time.season")[season]
 
+# compute the composite - takes about 40s by variable on Julie's laptop.
+tic()
+mean_winter_T_ext_lai = compute_composite(climate_data_season, time_steps_indices)
+tac()
+plt.figure(figsize=(8, 6))
+plotMap_withBorders(mean_winter_T_ext_lai, cmap="bwr",
+                    title=f"Winter temperature anomalies - for the {N} {extreme_type}est summer LAI")
 
-# on 3D LAI
-# TODO : bug here to correct. size issue.
-mean_winter_T_ext_lai  = compute_composite(climate_data_season, time_steps_indices)
+name_data = f"composite_map_{var_name}_for_{N}_{extreme_type}_summer_LAI"
+savefigure(dir_save_fig + name_data + ".png")
+plt.show()
 
-# createXarrayAsExample()
-# plotMap_withBorders()
+# save the array as a netcdf
+mean_winter_T_ext_lai.to_netcdf(dir_save_nc + name_data + ".nc")
 
-## Composite map of winter climate variable on those years
+# TODO : loop on low, high, variable, spring and winter, and N=1, 3, 5, 10
