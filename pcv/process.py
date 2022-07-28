@@ -4,7 +4,8 @@
 # Copyright (c) 2022 Your Company
 #
 
-# Script for function to process the lai
+# Script for function to process the lai, or other climate variable
+
 
 import numpy as np
 import xarray as xr
@@ -56,14 +57,13 @@ def comp_area_lat_lon(lat:np.array,lon:np.array)->np.array:
 
 
 def standardise_monthly(data:xr.Dataset)->xr.Dataset:
-    """Function standardises the `var` in the xarray data. This typically means subtracting the mean and dividing it by standard deviation of the lai. The function does it at a monthly scale
+    """Function standardises the `var` in the xarray data. This typically means subtracting the mean and dividing it by standard deviation of the climate data. The function does it at a monthly scale
 
     Args:
         data (xr.Dataset): The xarray dataset to be standardised
-        var (str): The name of the variable to be standarised in the lai.
 
     Returns:
-        xr.Dataset: Monthly standardised lai
+        xr.Dataset: Monthly standardised climate data
     """
     month_mean=data.groupby('time.month').mean("time")
     month_std=data.groupby('time.month').std("time")
@@ -71,6 +71,26 @@ def standardise_monthly(data:xr.Dataset)->xr.Dataset:
     standardised_data = (data.groupby('time.month') - month_mean).groupby('time.month') / month_std 
     
     return standardised_data
+
+
+def standardise_seasonly(data: xr.Dataset) -> xr.Dataset:
+    """Function standardises the `var` in the xarray data. This typically means subtracting the mean and dividing it by standard deviation of the climate data.
+    The function does it at a season scale
+
+    Args:
+        data (xr.Dataset): The xarray dataset to be standardised
+
+    Returns:
+        xr.Dataset: seasonal standardised data
+    """
+    season_mean = data.groupby('time.season').mean("time")
+    season_std = data.groupby('time.season').std("time")
+
+    standardised_data = (data.groupby('time.season') - season_mean).groupby('time.season') / season_std
+
+    return standardised_data
+
+
 
 def detrend(data:xr.Dataset, deg:int, var)->xr.Dataset:
     p = data.polyfit(dim="time", deg=deg)
