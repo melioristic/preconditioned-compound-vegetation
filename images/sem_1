@@ -1,0 +1,15 @@
+digraph G {
+	overlap=scale splines=true
+	edge [fontsize=12]
+	node [fillcolor="#cae6df" shape=circle style=filled]
+	node [shape=box style=""]
+	lai_summer [label=lai_summer]
+	lai_spring [label=lai_spring]
+	t2m_winter [label=t2m_winter]
+	tp_winter [label=tp_winter]
+	t2m_winter -> lai_spring [label=""]
+	tp_winter -> lai_spring [label=""]
+	lai_spring -> lai_summer [label=""]
+	t2m_winter -> lai_summer [label=""]
+	tp_winter -> lai_summer [label=""]
+}

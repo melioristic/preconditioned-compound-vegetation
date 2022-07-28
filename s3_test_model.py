@@ -47,7 +47,7 @@ vpd_spring = select_data(vpd_data,  "spring")
 vpd_summer = select_data(vpd_data,  "summer")
 
 ##### Section for everything about the model
-model_num = 2 
+model_num = 1
 
 if model_num==1:
     mod = mod_1
@@ -122,4 +122,4 @@ for lat in range(200):
             xr_dataset = fill_xr_dataset(xr_dataset, model.inspect(), chi2p
             , lat, lon)
 
-xr_dataset.to_netcdf("/Users/anand/Documents/data/project_3_data/data/sem_data_{model_num}.nc")
+xr_dataset.to_netcdf(f"/Users/anand/Documents/data/project_3_data/data/sem_data_{model_num}.nc")
