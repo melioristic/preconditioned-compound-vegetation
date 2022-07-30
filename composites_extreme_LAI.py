@@ -95,9 +95,10 @@ def mean_climate_for_extreme_LAI(climate_data_1D: np.array, time_steps_indices_1
 
 def compute_composite(climate_data: xr.DataArray, time_steps_indices: xr.DataArray) -> xr.DataArray:
     """ For each lat lon, computes the mean on the N time steps listed in time_steps_indices at those lat lon,
-    of the values taken in the climate_data"""
+    of the values taken in the climate_data. Watch out, the time steps must be consitent with the time or climate_data."""
     latitude = climate_data.latitude.values
     longitude = climate_data.longitude.values
+    print("did you check the consistency between climate data time steps and the original time steps? ")
 
     composite = createXarrayAsExample(climate_data[0], np.zeros(np.shape(climate_data[0])))
     time_steps_indices_xr = createXarrayAsExample(climate_data[:len(time_steps_indices)], time_steps_indices)
@@ -145,10 +146,16 @@ lai = xr.open_dataset(nc_path)[var_name]
 lai_summer = lai.groupby("time.season")["JJA"]
 axis_time = lai_summer.get_axis_num(dim='time')
 
+# we need to take first year of LAI
+first_year_LAI = lai_summer.time.dt.year[0].values
+last_year_LAI = lai_summer.time.dt.year[-1].values
+print("lai data first summer", first_year_LAI)
+
 # parameters for selection of extreme LAI years
-for season in ["MAM", "DJF"]:  # ["DJF", "MAM"]:  # season on which to look at the anomalies.
+
+for season in ["DJF"]:  # ["DJF", "MAM"]:  # season on which to look at the anomalies.
     print(f"working on {season} effects --------------------------")
-    for N in [5, 10]:  # number of extreme years, 1, 3
+    for N in [10]:  # number of extreme years, 1, 3
         for extreme_type in ["low", "high"]:
             print(f"working on the {N} extreme {extreme_type} summer LAI.")
 
@@ -157,7 +164,7 @@ for season in ["MAM", "DJF"]:  # ["DJF", "MAM"]:  # season on which to look at t
                                                      axis=axis_time, N=N,
                                                      extreme_type=extreme_type)
             tic()
-            for var_name in ["t2m"] : #, "tp", "sd", "ssrd", "swvlall", "vpd"]:  # "t2m"
+            for var_name in ["swvlall"]:  # , "tp", "sd", "ssrd", "swvlall", "vpd"]:  # "t2m"
                 print("working on", var_name)
 
                 ## Mean winter climate variable for this 5 years, pointwise
@@ -168,27 +175,34 @@ for season in ["MAM", "DJF"]:  # ["DJF", "MAM"]:  # season on which to look at t
                 # standardise the data
                 climate_data_season_all = standardise_seasonly(climate_data_abs)
                 climate_data_season_all.to_netcdf(dir_root + f"detrended_and_season_standardized_{var_name}" + ".nc")
-                print(climate_data_season_all.time[:10])
+
+                # make sure the time steps are consistent
+                offset = 0
+                if season == "DJF":
+                    offset = -1 # winter starts one calendar year before
+                climate_data_season_all = climate_data_season_all.sel(time=slice(str(first_year_LAI + offset), str(last_year_LAI)))
 
                 # select the season on the climate data
                 climate_data_season = climate_data_season_all.groupby("time.season")[season]
 
-                # # compute the composite - takes about 40s by variable on Julie's laptop.
-                #
-                # composite = compute_composite(climate_data_season, time_steps_indices)
-                #
-                # # plot the map
-                # if saving_figure:
-                #     plt.figure(figsize=(8, 6))
-                #     plotMap_withBorders(composite, cmap="bwr",
-                #                         title=f"{season} {var_name} anomalies - for the {N} {extreme_type}est summer LAI")
-                #
-                #     name_data = f"composite_map_{season}_{var_name}_for_{N}_{extreme_type}_summer_LAI"
-                #     savefigure(dir_save_fig + "composites_map/" + name_data + ".png")
-                #     plt.close()
-                #
-                # # save the array as a netcdf
-                # composite.to_netcdf(dir_save_nc + f"for_{extreme_type}est_LAI/" + name_data + ".nc")
+                print(f"climate data, on season {season} only, going from", climate_data_season.time[0].values)
+
+
+                # compute the composite - takes about 40s by variable on Julie's laptop.
+                composite = compute_composite(climate_data_season, time_steps_indices)
+
+                # plot the map
+                if saving_figure:
+                    plt.figure(figsize=(8, 6))
+                    plotMap_withBorders(composite, cmap="bwr",
+                                        title=f"{season} {var_name} anomalies - for the {N} {extreme_type}est summer LAI")
+
+                    name_data = f"composite_map_{season}_{var_name}_for_{N}_{extreme_type}_summer_LAI"
+                    savefigure(dir_save_fig + "composites_map/" + name_data + ".png")
+                    plt.close()
+
+                # save the array as a netcdf
+                composite.to_netcdf(dir_save_nc + f"for_{extreme_type}est_LAI/" + name_data + ".nc")
             tac()
 
 print("done!")
