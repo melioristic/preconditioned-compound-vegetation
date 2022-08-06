@@ -55,7 +55,7 @@ def comp_area_lat_lon(lat:np.array,lon:np.array)->np.array:
     return area
 
 
-def standardise_monthly(data:xr.Dataset, var:str)->xr.Dataset:
+def standardise_monthly(data:xr.Dataset)->xr.Dataset:
     """Function standardises the `var` in the xarray `data`. This typically means subtracting the mean and dividing it by standard deviation of the data. The function does it at a monthly scale
 
     Args:
@@ -75,20 +75,34 @@ def standardise_monthly(data:xr.Dataset, var:str)->xr.Dataset:
 @timeit
 def detrend(data:xr.Dataset, deg:int, var:str)->xr.Dataset:
     p = data.polyfit(dim="time", deg=deg)
-    fit = xr.polyval(data["time"], p[var+"_polyfit_coefficients"])
+    fit = xr.polyval(data["time"], p["polyfit_coefficients"])
     return data - fit
 
+def detrend_seasons(data:xr.Dataset, deg:int, var:str)->xr.Dataset:
+
+    data_list = []
+    for month in range(3,13,3):
+        seasonal_data = data[var].where(data["time.month"]==month, drop=True)
+        detrended_season = detrend(seasonal_data, deg, var)
+        data_list.append(detrended_season)
+
+
+    if var=="vpd_cf":
+        print(f"var_name changed from {var} to vpd")
+        var = "vpd"
+    
+    return xr.concat(data_list, dim="time").sortby("time").to_dataset(name=var)
+
 def aggregate_seasons(data:xr.Dataset, var="t2m")->xr.Dataset:
-    aggregate = data.resample({"time":"QS-DEC"}).sum()
+    aggregate = data.resample({"time":"QS-DEC"}).mean()
     return aggregate
 
-def select_data(data:xr.Dataset, var:str, season:str)->xr.Dataset:
+def select_data(data:xr.Dataset, season:str)->xr.Dataset:
     
     season_list = ["winter", "spring", "summer", "autumn"]
     
     assert season in season_list, "Seasons can only be : winter, spring, summer or autumn"
     month = -1
-
     if season == "winter":
         month=12
     elif season=="spring":
@@ -97,5 +111,117 @@ def select_data(data:xr.Dataset, var:str, season:str)->xr.Dataset:
         month=6
     elif season=="autumn":
         month=9
+    return data.where(data["time.month"]==month, drop=True).sortby("time")
 
-    return data[var].where(data["time.month"]==month, drop=True).sortby("time") 
+def create_xr_dataset(model, lat, lon):
+    model_data_dict = {}
+    
+    var_list = _create_xr_variable_list(model)
+    metric_list = model.inspect().columns[3:]
+
+    xr_dict_list = _permute_list(var_list, metric_list)
+
+    for each in xr_dict_list:
+        model_data_dict[each] = (
+                ("latitude", "longitude"), np.full((200, 220), np.nan))
+    
+    model_data_dict["chi2p"] = (
+                ("latitude", "longitude"), np.full((200, 220), np.nan))
+
+    coords= {"latitude":lat, "longitude":lon}
+
+    return xr.Dataset(model_data_dict, coords = coords)
+
+def _create_xr_variable_list(model):
+    var_list = []
+    for index in model.inspect().index:
+        var_list.append("".join(model.inspect().iloc[index,:3].values))
+
+    return var_list
+
+def _permute_list(a, b):
+    permuted_list = []
+    for each_1 in a:
+        for each_2 in b:
+            permuted_list.append(each_1+"_"+each_2)
+    return permuted_list
+
+def fill_xr_dataset(xr_dataset, model_inspect, chi2p, lat, lon):
+
+    xr_dataset["chi2p"][lat, lon] = chi2p
+    xr_dataset = _fill_inspect_data(xr_dataset, model_inspect, lat, lon)
+
+    return xr_dataset
+
+def _fill_inspect_data(xr_dataset, model_inspect, lat, lon):
+    for index in model_inspect.index:
+        var_name = "".join(model_inspect.iloc[index, :3].values)
+
+        for metric, val in model_inspect.iloc[index,3:].iteritems():
+            xr_dataset[var_name+"_"+metric][lat, lon] = val
+
+    return xr_dataset
+
+
+def regrid_data(data, interp_like_data):
+
+    interp_like_data = interp_like_data.reindex(latitude=interp_like_data.latitude[::-1])
+    coords = {
+        "lat" : np.arange(interp_like_data.latitude.values[0], interp_like_data.latitude.values[-1]+0.5, 0.25 ),  
+        "lon" : np.arange(interp_like_data.longitude.values[0], interp_like_data.longitude.values[-1]+0.5, 0.25 ) 
+    }
+
+    # data.drop_vars(["majority_class_1", "majority_class_2", "majority_class_3"])
+
+    area_0_05 = comp_area_lat_lon(data.lat.values, data.lon.values)
+    area_0_25 = comp_area_lat_lon(interp_like_data.latitude.values, interp_like_data.longitude.values)
+
+    area_0_25 = np.reshape(area_0_25,(area_0_25.shape[0],area_0_25.shape[1],1))
+
+    regridded_data = (data*area_0_05).groupby_bins("lon", coords["lon"], right = False).sum().groupby_bins("lat", coords["lat"], right = False).sum()/area_0_25
+
+    regridded_data["lat_bins"] = coords["lat"][:-1]
+    regridded_data["lon_bins"] = coords["lon"][:-1]
+
+    regridded_data =  regridded_data.rename({"lat_bins":"lat", "lon_bins":"lon"})
+        
+    return regridded_data
+
+
+## NEED TO IMPROVE regridding to make it a more generic function 
+
+# def regrid_data(data_path:str, regrid_like_path:str)->xr.Dataset:
+    
+#     """The function regrids the data at `data_path` to the same latitude and longitude as `regrid_like_path`. The regrid_like_path data should have latitude and longitude fields. The data path should have lat and lon fields. The function is only tested with nc files The function is based on linear interpolation. This messes up the majority class and hence are deleted. 
+
+#     Args:
+#         data_path (str): The path of the data to be regridded
+#         regrid_like_path (str): The path of data to be regridded like
+
+#     Returns:
+#         xr.Dataset: _description_
+#     """
+
+#     with xr.open_dataset(data_path) as data:
+#         with xr.open_dataset(regrid_like_path) as interp_like_data:
+            
+#             interp_like_data = interp_like_data.reindex(latitude=interp_like_data.latitude[::-1])
+#             coords = {
+#                 "lat" : np.arange(interp_like_data.latitude.values[0], interp_like_data.latitude.values[-1]+0.5, 0.25 ),  
+#                 "lon" : np.arange(interp_like_data.longitude.values[0], interp_like_data.longitude.values[-1]+0.5, 0.25 ) 
+#             }
+
+#             data.drop_vars(["majority_class_1", "majority_class_2", "majority_class_3"])
+
+#             area_0_05 = comp_area_lat_lon(data.lat.values, data.lon.values)
+#             area_0_25 = comp_area_lat_lon(interp_like_data.latitude.values, interp_like_data.longitude.values)
+
+#             regridded_data = (data*area_0_05).groupby_bins("lon", coords["lon"], right = False).sum().groupby_bins("lat", coords["lat"], right = False).sum()/area_0_25
+
+#             regridded_data["lat_bins"] = coords["lat"][:-1]
+#             regridded_data["lon_bins"] = coords["lon"][:-1]
+
+#             regridded_data =  regridded_data.rename({"lat_bins":"lat", "lon_bins":"lon"})
+        
+#     return regridded_data
+
