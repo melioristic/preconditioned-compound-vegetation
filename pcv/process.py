@@ -72,38 +72,38 @@ def standardise_monthly(data:xr.Dataset)->xr.Dataset:
     
     return standardised_data
 
-@timeit
-def detrend(data:xr.Dataset, deg:int, var:str)->xr.Dataset:
+def detrend(data:xr.Dataset, deg:int)->xr.Dataset:
     """Detrends the dataset along time dimension by fitting a polynomila of degree `deg` 
-    #TODO:
-        Check when the var argument is required. If not deprecate it.
 
     Args:
         data (xr.Dataset): Dataset to be detrended
         deg (int): degree of the polynomial to detrend
-        var (str): variable name to be detrended
 
     Returns:
         xr.Dataset: Detrended dataset
     """
 
     p = data.polyfit(dim="time", deg=deg)
-    fit = xr.polyval(data["time"], p["polyfit_coefficients"])
+
+    var_name = list(p.keys())[0] # This can be a source of error.
+    fit = xr.polyval(data["time"], p[var_name])
     return data - fit
 
-def detrend_seasons(data:xr.Dataset, deg:int, var:str)->xr.Dataset:
+@timeit
+def detrend_seasons(data:xr.Dataset, deg:int)->xr.Dataset:
     """Detrend dataset seasonaly, relies on `detrend`
-    #TODO
-        Check if var use can be eliminated.
+    #LIMITATION
+        Will only workd for xarray dataset with 1 variables
 
     Args:
         data (xr.Dataset): dataset to be detrended
         deg (int): degree of the polynomial to detrend
-        var (str): variable name to be detrended
 
     Returns:
         xr.Dataset: Detrended dataset
     """
+
+    assert len(list(data.keys())) ==  1, "Detrend seasons only works with datasets with 1 variable"
 
     data_list = []
 
@@ -112,16 +112,11 @@ def detrend_seasons(data:xr.Dataset, deg:int, var:str)->xr.Dataset:
     # Thus season months are 3, 6, 9, 12
 
     for month in range(3,13,3):
-        seasonal_data = data[var].where(data["time.month"]==month, drop=True) #select variable
-        detrended_season = detrend(seasonal_data, deg, var) # detrend data
+        seasonal_data = data.where(data["time.month"]==month, drop=True) #select month
+        detrended_season = detrend(seasonal_data, deg) # detrend data
         data_list.append(detrended_season)
-
-
-    if var=="vpd_cf":
-        print(f"var_name changed from {var} to vpd")
-        var = "vpd"
     
-    return xr.concat(data_list, dim="time").sortby("time").to_dataset(name=var)
+    return xr.concat(data_list, dim="time").sortby("time")
 
 
 def aggregate_seasons(data:xr.Dataset)->xr.Dataset:
@@ -152,55 +147,6 @@ def select_data(data:xr.Dataset, season:str)->xr.Dataset:
         month=9
     return data.where(data["time.month"]==month, drop=True).sortby("time")
 
-def create_xr_dataset(model, lat, lon):
-    model_data_dict = {}
-    
-    var_list = _create_xr_variable_list(model)
-    metric_list = model.inspect().columns[3:]
-
-    xr_dict_list = _permute_list(var_list, metric_list)
-
-    for each in xr_dict_list:
-        model_data_dict[each] = (
-                ("latitude", "longitude"), np.full((200, 220), np.nan))
-    
-    model_data_dict["chi2p"] = (
-                ("latitude", "longitude"), np.full((200, 220), np.nan))
-
-    coords= {"latitude":lat, "longitude":lon}
-
-    return xr.Dataset(model_data_dict, coords = coords)
-
-def _create_xr_variable_list(model):
-    var_list = []
-    for index in model.inspect().index:
-        var_list.append("".join(model.inspect().iloc[index,:3].values))
-
-    return var_list
-
-def _permute_list(a, b):
-    permuted_list = []
-    for each_1 in a:
-        for each_2 in b:
-            permuted_list.append(each_1+"_"+each_2)
-    return permuted_list
-
-def fill_xr_dataset(xr_dataset, model_inspect, chi2p, lat, lon):
-
-    xr_dataset["chi2p"][lat, lon] = chi2p
-    xr_dataset = _fill_inspect_data(xr_dataset, model_inspect, lat, lon)
-
-    return xr_dataset
-
-def _fill_inspect_data(xr_dataset, model_inspect, lat, lon):
-    for index in model_inspect.index:
-        var_name = "".join(model_inspect.iloc[index, :3].values)
-
-        for metric, val in model_inspect.iloc[index,3:].iteritems():
-            xr_dataset[var_name+"_"+metric][lat, lon] = val
-
-    return xr_dataset
-
 
 def regrid_data(data, interp_like_data):
 
@@ -212,12 +158,14 @@ def regrid_data(data, interp_like_data):
 
     # data.drop_vars(["majority_class_1", "majority_class_2", "majority_class_3"])
 
+    
     area_0_05 = comp_area_lat_lon(data.lat.values, data.lon.values)
+
     area_0_25 = comp_area_lat_lon(interp_like_data.latitude.values, interp_like_data.longitude.values)
 
     area_0_25 = np.reshape(area_0_25,(area_0_25.shape[0],area_0_25.shape[1],1))
 
-    regridded_data = (data*area_0_05).groupby_bins("lon", coords["lon"], right = False).sum().groupby_bins("lat", coords["lat"], right = False).sum()/area_0_25
+    regridded_data = (data*area_0_05).groupby_bins("lon", coords["lon"], right = False).sum(skipna=False).groupby_bins("lat", coords["lat"], right = False).sum(skipna=False)/area_0_25
 
     regridded_data["lat_bins"] = coords["lat"][:-1]
     regridded_data["lon_bins"] = coords["lon"][:-1]
