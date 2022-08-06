@@ -74,16 +74,46 @@ def standardise_monthly(data:xr.Dataset)->xr.Dataset:
 
 @timeit
 def detrend(data:xr.Dataset, deg:int, var:str)->xr.Dataset:
+    """Detrends the dataset along time dimension by fitting a polynomila of degree `deg` 
+    #TODO:
+        Check when the var argument is required. If not deprecate it.
+
+    Args:
+        data (xr.Dataset): Dataset to be detrended
+        deg (int): degree of the polynomial to detrend
+        var (str): variable name to be detrended
+
+    Returns:
+        xr.Dataset: Detrended dataset
+    """
+
     p = data.polyfit(dim="time", deg=deg)
     fit = xr.polyval(data["time"], p["polyfit_coefficients"])
     return data - fit
 
 def detrend_seasons(data:xr.Dataset, deg:int, var:str)->xr.Dataset:
+    """Detrend dataset seasonaly, relies on `detrend`
+    #TODO
+        Check if var use can be eliminated.
+
+    Args:
+        data (xr.Dataset): dataset to be detrended
+        deg (int): degree of the polynomial to detrend
+        var (str): variable name to be detrended
+
+    Returns:
+        xr.Dataset: Detrended dataset
+    """
 
     data_list = []
+
+    # Depends on the way in which data is aggregated. Here there are 4 seasons
+    # DJF, MAM, JJA, SON and the time associated is the first day of the season
+    # Thus season months are 3, 6, 9, 12
+
     for month in range(3,13,3):
-        seasonal_data = data[var].where(data["time.month"]==month, drop=True)
-        detrended_season = detrend(seasonal_data, deg, var)
+        seasonal_data = data[var].where(data["time.month"]==month, drop=True) #select variable
+        detrended_season = detrend(seasonal_data, deg, var) # detrend data
         data_list.append(detrended_season)
 
 
@@ -93,7 +123,16 @@ def detrend_seasons(data:xr.Dataset, deg:int, var:str)->xr.Dataset:
     
     return xr.concat(data_list, dim="time").sortby("time").to_dataset(name=var)
 
-def aggregate_seasons(data:xr.Dataset, var="t2m")->xr.Dataset:
+
+def aggregate_seasons(data:xr.Dataset)->xr.Dataset:
+    """Aggregate data based on seasons. There is a resampling function which can do this. Resampling is done quarterly starting from december. The time assigned is the first day of the sampling period
+
+    Args:
+        data (xr.Dataset): data to be resampled
+
+    Returns:
+        xr.Dataset: Resampled dataset
+    """
     aggregate = data.resample({"time":"QS-DEC"}).mean()
     return aggregate
 
