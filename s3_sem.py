@@ -74,6 +74,7 @@ if model_num==1:
 elif model_num==2:
     mod = mod_2
 
+
 model = sm.Model(mod)
 
 xr_dataset = create_xr_dataset(model, lai_data.lat, lai_data.lon)
@@ -82,7 +83,8 @@ init_time = time.time()
 for lat_i, lat in enumerate(lai_data.lat.values):
     strt_time = time.time()
     for lon_i , lon in enumerate(lai_data.lon.values):
-        
+
+        model = sm.Model(mod)
         lai_w = lai_winter.GLOBMAP_LAI.sel(lon=lon, lat=lat).to_numpy()[1:-1]
         swvlall_w = swvlall_winter.swvlall.sel(longitude=lon, latitude=lat).to_numpy()[2:-1]
         if np.isnan(lai_w).any() == True:
@@ -149,7 +151,6 @@ for lat_i, lat in enumerate(lai_data.lat.values):
             df = pd.DataFrame(data, columns=col_names)
             df=(df-df.mean())/df.std()
             model.fit(df)
-
             chi2p = sm.calc_stats(model)["chi2 p-value"][0]
             xr_dataset = fill_xr_dataset(xr_dataset, model.inspect(), chi2p
             , lat_i, lon_i)

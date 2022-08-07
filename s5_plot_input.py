@@ -41,6 +41,6 @@ lai = xr.open_dataset(lai_path)
 
 
 sem_data = xr.open_dataset(data_path+"sem_data_2.nc")
-print(sem_data.keys())
-sem_data["chi2p"].plot(figsize=(14,4))
+print(list(sem_data.keys())[20:])
+sem_data["lai_summer~swvlall_winter_p-value"].plot(figsize=(14,4))
 plt.savefig(image_path+"sem_example.png")
