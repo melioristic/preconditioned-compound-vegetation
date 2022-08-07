@@ -21,5 +21,5 @@ model_num = 2
 sem_data = xr.open_dataset(f"/data/compoundx/anand/PCV/data/sem_data_{model_num}.nc")
 
 sem_map = SEMMap(sem_data)
-
+sem_map.lai_summer_map("LAI_summer.png")
 

@@ -132,3 +132,7 @@ dmypy.json
 # Remove DSStore
 
 .DS_Store
+
+# Remove workspace
+
+*.code-workspace
