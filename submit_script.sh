@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name=sem_nhem
-#SBATCH --time=0-01:30:00
+#SBATCH --time=0-02:30:00
 #SBATCH --mem-per-cpu=8G
 
 

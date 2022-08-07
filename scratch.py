@@ -1,22 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# ==========================================================
-# Created by : Mohit Anand
-# Created on : Sun Aug 07 2022 at 8:57:26 AM
-# ==========================================================
-# Created on Sun Aug 07 2022
-# __copyright__ = Copyright (c) 2022, PCV Project
-# __credits__ = [Mohit Anand,]
-# __license__ = Private
-# __version__ = 0.0.0
-# __maintainer__ = Mohit Anand
-# __email__ = itsmohitanand@gmail.com
-# __status__ = Development
-# ==========================================================
-
-# Script for running sem model
-
-
 import xarray as xr
 import semopy as sm
 from pcv.process import select_data
@@ -80,14 +61,13 @@ xr_dataset = create_xr_dataset(model, lai_data.lat, lai_data.lon)
 
 init_time = time.time()
 for lat_i, lat in enumerate(lai_data.lat.values):
+    print(lat_i)
     strt_time = time.time()
     for lon_i , lon in enumerate(lai_data.lon.values):
         
         lai_w = lai_winter.GLOBMAP_LAI.sel(lon=lon, lat=lat).to_numpy()[1:-1]
         swvlall_w = swvlall_winter.swvlall.sel(longitude=lon, latitude=lat).to_numpy()[2:-1]
         if np.isnan(lai_w).any() == True:
-            pass
-        elif np.isnan(swvlall_w).all() == True:
             pass
         else:
            
@@ -153,7 +133,7 @@ for lat_i, lat in enumerate(lai_data.lat.values):
             chi2p = sm.calc_stats(model)["chi2 p-value"][0]
             xr_dataset = fill_xr_dataset(xr_dataset, model.inspect(), chi2p
             , lat_i, lon_i)
-    print(f"Time taken for lat {lat_i} is {(time.time()-strt_time):.2f} seconds.")
+    print(f"Time taken for lat {lat} is {(time.time()-strt_time):.2f} seconds.")
 xr_dataset.to_netcdf(f"/data/compoundx/anand/PCV/data/sem_data_{model_num}.nc")
 print(f"Total time {(time.time()-init_time):.2f} seconds.")
 
