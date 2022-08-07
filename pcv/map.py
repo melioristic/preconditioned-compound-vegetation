@@ -16,14 +16,19 @@
 
 # Script for all the plots
 import cartopy.crs as ccrs
-import cartopy as cp
+import cartopy.feature as cf
+from cartopy.feature import ShapelyFeature
 import matplotlib.pyplot as plt
 import numpy as np
+import cartopy.io.shapereader as shpreader
+from pcv.cfg import IPCC_REGION_SHPFILE 
+
 
 class SEMMap(object):
     def __init__(self, sem_data) -> None:
         self.sem_data = sem_data
-    
+        self.ipcc_regions = shpreader.Reader(IPCC_REGION_SHPFILE)
+
     def lai_summer_map(self, fpath):
         
         lon = self.sem_data.lon.values
@@ -36,12 +41,16 @@ class SEMMap(object):
         fig, ax = plt.subplots(n_plots+1, 1, figsize = (14, 3*n_plots), 
                 subplot_kw={'projection': ccrs.PlateCarree()})
 
+        shape_feature_list = self._generate_shape_feature()
+            
         for i, name in enumerate(name_list):
             valE = self.sem_data[name][:,:].to_numpy()
             valP = self.sem_data[name.replace("Estimate", "p-value")].to_numpy()
 
             cs1 = ax[i].contourf(lon, lat, valE, cmap='coolwarm',  transform=ccrs.PlateCarree())
             ax[i].contourf(lon, lat, valP, levels=[0, 0.05, 1.0],  hatches = ["...", ""], alpha=0)
+            self._add_features(ax[i], shape_feature_list)
+
             ax[i].coastlines()
             ax[i].set_title(name)
 
@@ -59,3 +68,15 @@ class SEMMap(object):
         plt.subplots_adjust(hspace=0.3)
         plt.suptitle("Summmer LAI relationships")
         plt.savefig(fpath)
+
+    def _add_features(self, ax, shape_feature_list):
+        for shape_feature in shape_feature_list:
+            ax.add_feature(shape_feature)
+
+    def _generate_shape_feature(self):
+        shape_feature_list = []
+        for i, records in enumerate(self.ipcc_regions.records()):
+            shape_feature = ShapelyFeature([records.geometry], ccrs.PlateCarree(), facecolor = "None", edgecolor='black', lw=1)
+            shape_feature_list.append(shape_feature)
+        
+        return shape_feature_list
