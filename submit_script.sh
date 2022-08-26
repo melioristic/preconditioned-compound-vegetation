@@ -2,8 +2,8 @@
 
 #SBATCH --job-name=sem_nhem
 #SBATCH --time=0-02:30:00
-#SBATCH --mem-per-cpu=8G
-
+#SBATCH --mem-per-cpu=4G
+#SBATCH --cpus-per-task=2
 
 # output files
 #SBATCH -o sem_2.out
@@ -16,5 +16,5 @@ ml load GEOS/3.9.1
 module load Anaconda3
 source activate pcv
 
-python s3_sem.py
+python s3_sem.py 3
 

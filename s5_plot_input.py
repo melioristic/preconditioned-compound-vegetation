@@ -18,29 +18,24 @@
 import xarray as xr
 import matplotlib.pyplot as plt
 
+era5_data_path = "/data/compoundx/ERA5/MohitBudapestProject/"
+
 
 data_path = "/data/compoundx/anand/PCV/data/"
 image_path = "/data/compoundx/anand/PCV/images/" 
 
 t2m_path = data_path+"detrended_seasonal_t2m.nc"
-swvlall_path = data_path+"detrended_seasonal_swvlall.nc"
+swvlall_path = era5_data_path + "swvlall.monthly.era5.nhemisphere.1981-2020.nc"
 lai_path = data_path+"detrended_seasonal_lai.nc"
 
 t2m = xr.open_dataset(t2m_path)
 swvlall = xr.open_dataset(swvlall_path)
 lai = xr.open_dataset(lai_path)
 
-# for i in range(5):
 
-#     swvlall.swvlall[4*i, :, :].plot(figsize=(14,4))
-#     plt.savefig(image_path+f"swvlall_example_{i}.png")
-#     plt.close()
+swvlall.swvlall[4*1, :, :].plot(figsize=(14,4))
+print(swvlall.swvlall[4*1, :, :].min())
 
-# lai.GLOBMAP_LAI[4*i, :, :].plot(figsize=(14,4))
-# plt.savefig(image_path+f"lai_example_{i}.png")
+plt.savefig(image_path+f"swvlall_example_{1}.png")
+plt.close()
 
-
-sem_data = xr.open_dataset(data_path+"sem_data_2.nc")
-print(list(sem_data.keys())[20:])
-sem_data["lai_summer~swvlall_winter_p-value"].plot(figsize=(14,4))
-plt.savefig(image_path+"sem_example.png")

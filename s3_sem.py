@@ -24,9 +24,17 @@ import matplotlib.pylab as plt
 import pandas as pd
 import numpy as np
 from pcv.ds import create_xr_dataset, fill_xr_dataset
-from pcv.models import mod_1, mod_2
-
+from pcv.models import *
 import time
+
+import argparse
+
+parser = argparse.ArgumentParser(description='Args for model')
+parser.add_argument('model_num', metavar='mn', type=int,
+                    help='For choosing the models from models.py')
+
+args = parser.parse_args()
+model_num = args.model_num
 
 t2m_path = "/data/compoundx/anand/PCV/data/detrended_seasonal_t2m.nc"
 tp_path = "/data/compoundx/anand/PCV/data/detrended_seasonal_tp.nc"
@@ -73,6 +81,8 @@ if model_num==1:
     mod = mod_1
 elif model_num==2:
     mod = mod_2
+elif model_num==3:
+    mod = mod_3
 
 
 model = sm.Model(mod)
