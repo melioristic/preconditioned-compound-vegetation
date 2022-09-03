@@ -17,9 +17,8 @@
 import xarray as xr
 from pcv.map import SEMMap
 
-model_num = 2
+model_num = 4
 sem_data = xr.open_dataset(f"/data/compoundx/anand/PCV/data/sem_data_{model_num}.nc")
 
 sem_map = SEMMap(sem_data)
-sem_map.lai_summer_map("LAI_summer.png")
-
+sem_map.group_clim()

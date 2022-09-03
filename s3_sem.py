@@ -75,7 +75,6 @@ vpd_spring = select_data(vpd_data,  "spring")
 vpd_summer = select_data(vpd_data,  "summer")
 
 ##### Section for everything about the model
-model_num = 2
 
 if model_num==1:
     mod = mod_1
@@ -83,7 +82,8 @@ elif model_num==2:
     mod = mod_2
 elif model_num==3:
     mod = mod_3
-
+elif model_num==4:
+    mod = mod_4
 
 model = sm.Model(mod)
 
@@ -162,9 +162,11 @@ for lat_i, lat in enumerate(lai_data.lat.values):
             df=(df-df.mean())/df.std()
             model.fit(df)
             chi2p = sm.calc_stats(model)["chi2 p-value"][0]
-            xr_dataset = fill_xr_dataset(xr_dataset, model.inspect(), chi2p
-            , lat_i, lon_i)
+            xr_dataset = fill_xr_dataset(xr_dataset, model.inspect(), chi2p, lat_i, lon_i)
+
+
     print(f"Time taken for lat {lat_i} is {(time.time()-strt_time):.2f} seconds.")
+
 xr_dataset.to_netcdf(f"/data/compoundx/anand/PCV/data/sem_data_{model_num}.nc")
 print(f"Total time {(time.time()-init_time):.2f} seconds.")
 
