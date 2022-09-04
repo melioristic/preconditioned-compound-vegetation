@@ -23,6 +23,12 @@ p1 = {
     "tomato" : "#FF674D"
 }
 
+p3_1 = {
+    "blue" : "#8da0cb",
+    "orange" : "#fc8d62",
+    "green" : "#66c2a5"
+}
+
 chi_bins = [0, 0.05, 0.10, 0.25, 0.50, 1.0]
 
 def custom_cmap(palette, p_bins, reverse = True):
