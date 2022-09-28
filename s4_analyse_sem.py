@@ -40,5 +40,7 @@ piping_2 = "t2m_winter |> swvlall_winter |> vpd_winter |> lai_winter |> lai_spri
 piping_3 = "tp_winter |> swvlall_winter |> lai_winter |> lai_spring |>  lai_summer"
 piping_4 = "tp_winter |> swvlall_winter |> vpd_winter |> lai_winter |> lai_spring |>  lai_summer"
 
-piping= piping_4
-sem_map.path_map(piping, "/data/compoundx/anand/PCV/images/"+ piping.replace(" ", "") + f"_{model_num}.png")
+piping_list = [piping_1, piping_2, piping_3, piping_4]
+
+for piping in piping_list:
+    sem_map.path_map(piping, "/data/compoundx/anand/PCV/images/"+ piping.replace(" ", "") + f"_{model_num}.png")

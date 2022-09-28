@@ -173,11 +173,27 @@ class SEMMap(object):
                 "lon" : self.lon.data,
             }
         )
-        
         return lu_mc_1
 
 
     def path_map(self, piping, img_path):
+        
+        max_min = 1
+        if isinstance(piping, list):
+            valE = self._get_piping_val(piping[0])
+            for each_piping in piping[1:]:
+                valE += self._get_piping_val(each_piping)
+            max_min = 0.5
+        else:
+            valE = self._get_piping_val(piping)
+
+        
+
+        fig, ax_head = self.plot_clim_lu_group(valE, max_min=max_min)
+        plt.savefig(img_path)
+        plt.close()
+
+    def _get_piping_val(self, piping):
         graph_list = piping.split("|>")
 
         valE = np.ones_like(self.sem_data["chi2p"].data)
@@ -185,13 +201,9 @@ class SEMMap(object):
             name = graph_list[i+1].replace(" ", "") + "~" + graph_list[i].replace(" ", "") + "_Estimate"
             valE = valE* self.sem_data[name].data
 
-        gm = np.power(np.abs(valE), 1/(len(graph_list)-1))
-        valE = np.sign(valE)*gm
+        # max_min = (1/10)**((len(graph_list)-1)//2)
 
-        fig, ax_head = self.plot_clim_lu_group(valE)
-        plt.savefig(img_path)
-        plt.close()
-
+        return valE
 
     def plot_clim_lu_group(self, valE, max_min = 1.0, n=1):
 
@@ -247,7 +259,7 @@ class SEMMap(object):
                 # sns.histplot(forest_data, ax = ax, kde = True, color = p3_1["blue"], alpha = 0.5)
                 # sns.histplot(crop_data, ax = ax, kde = True, color = p3_1["green"], alpha = 0.5)
                 # sns.histplot(all_data, ax = ax, kde = True, color = p3_1["orange"], alpha = 0.5)
-                sns.kdeplot(all_data, ax = ax, color = p3_1["blue"], fill = True, label = "Total")
+                sns.kdeplot(all_data, ax = ax, color = "k", label = "Total")
                 sns.kdeplot(crop_data, ax = ax, color = p3_1["orange"], alpha = 0.5, fill = True, label = "Crop")
                 sns.kdeplot(forest_data, ax = ax, color = p3_1["green"], alpha = 0.5, fill = True, label = "Forest")
                 

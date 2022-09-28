@@ -14,9 +14,20 @@ lai_spring ~ t2m_winter +tp_winter
 mod_2 = """
 # measurement model
 
-lai_summer ~ swvlall_summer + swvlall_winter + lai_spring + t2m_winter
+lai_summer ~ swvlall_summer + lai_spring 
 swvlall_summer ~ lai_spring + swvlall_spring + t2m_summer+ tp_summer
 lai_spring ~ swvlall_spring 
+swvlall_spring ~ swvlall_winter + t2m_spring+ tp_spring
+swvlall_winter ~ t2m_winter+ tp_winter
+
+"""
+
+mod_2_extended = """
+# measurement model
+
+lai_summer ~ swvlall_summer + lai_spring 
+swvlall_summer ~ lai_spring + swvlall_spring + t2m_summer+ tp_summer
+lai_spring ~ swvlall_spring + t2m_winter 
 swvlall_spring ~ swvlall_winter + t2m_spring+ tp_spring
 swvlall_winter ~ t2m_winter+ tp_winter
 

@@ -80,6 +80,8 @@ if model_num==1:
     mod = mod_1
 elif model_num==2:
     mod = mod_2
+elif model_num==20:
+    mod = mod_2_extended
 elif model_num==3:
     mod = mod_3
 elif model_num==4:
