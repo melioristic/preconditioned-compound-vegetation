@@ -42,12 +42,14 @@ ssrd_path = "/data/compoundx/anand/PCV/data/detrended_seasonal_ssrd.nc"
 lai_path = "/data/compoundx/anand/PCV/data/detrended_seasonal_lai.nc"
 swvlall_path = "/data/compoundx/anand/PCV/data/detrended_seasonal_swvlall.nc"
 vpd_path = "/data/compoundx/anand/PCV/data/detrended_seasonal_vpd.nc"
+sd_path = "/data/compoundx/anand/PCV/data/detrended_seasonal_sd.nc"
 
 t2m_data = xr.open_dataset(t2m_path)
 tp_data = xr.open_dataset(tp_path)
 ssrd_data = xr.open_dataset(ssrd_path)
 swvlall_data = xr.open_dataset(swvlall_path)
 vpd_data = xr.open_dataset(vpd_path)
+sd_data = xr.open_dataset(sd_path)
 lai_data = xr.open_dataset(lai_path)
 
 t2m_winter = select_data(t2m_data,  "winter")
@@ -74,6 +76,11 @@ vpd_winter = select_data(vpd_data,  "winter")
 vpd_spring = select_data(vpd_data,  "spring")
 vpd_summer = select_data(vpd_data,  "summer")
 
+
+sd_winter = select_data(sd_data,  "winter")
+sd_spring = select_data(sd_data,  "spring")
+sd_summer = select_data(sd_data,  "summer")
+
 ##### Section for everything about the model
 
 if model_num==1:
@@ -86,7 +93,15 @@ elif model_num==3:
     mod = mod_3
 elif model_num==4:
     mod = mod_4
-
+elif model_num == 5:
+    mod = mod_5
+elif model_num == 6:
+    mod = mod_6
+elif model_num == 7:
+    mod = mod_7
+elif model_num == 8:
+    mod = mod_8
+    
 model = sm.Model(mod)
 
 xr_dataset = create_xr_dataset(model, lai_data.lat, lai_data.lon)
@@ -99,10 +114,14 @@ for lat_i, lat in enumerate(lai_data.lat.values):
         model = sm.Model(mod)
         lai_w = lai_winter.GLOBMAP_LAI.sel(lon=lon, lat=lat).to_numpy()[1:-1]
         swvlall_w = swvlall_winter.swvlall.sel(longitude=lon, latitude=lat).to_numpy()[2:-1]
+        sd_w = sd_winter.sd.sel(longitude=lon, latitude=lat).to_numpy()[2:-1]
+
         if np.isnan(lai_w).any() == True:
             pass
         elif np.isnan(swvlall_w).all() == True:
             pass
+        # elif np.isnan(sd_w).all() == True:
+        #     pass
         else:
            
             
@@ -135,6 +154,10 @@ for lat_i, lat in enumerate(lai_data.lat.values):
             vpd_sp = vpd_spring.vpd_cf.sel(longitude=lon, latitude=lat).to_numpy()[1:-1]
             vpd_su = vpd_summer.vpd_cf.sel(longitude=lon, latitude=lat).to_numpy()[1:-1]
 
+            sd_w = sd_winter.sd.sel(longitude=lon, latitude=lat).to_numpy()[2:-1]
+            sd_sp = sd_spring.sd.sel(longitude=lon, latitude=lat).to_numpy()[1:-1]
+            sd_su = sd_summer.sd.sel(longitude=lon, latitude=lat).to_numpy()[1:-1]
+
             swvlall_w = swvlall_winter.swvlall.sel(longitude=lon, latitude=lat).to_numpy()[2:-1]
             swvlall_sp = swvlall_spring.swvlall.sel(longitude=lon, latitude=lat).to_numpy()[1:-1]
             swvlall_su = swvlall_summer.swvlall.sel(longitude=lon, latitude=lat).to_numpy()[1:-1]
@@ -147,6 +170,7 @@ for lat_i, lat in enumerate(lai_data.lat.values):
                     ssrd_w, ssrd_sp, ssrd_su, 
                     lai_w, lai_sp, lai_su,
                     vpd_w, vpd_sp, vpd_su,
+                    sd_w, sd_sp, sd_su,
                     swvlall_w, swvlall_sp, swvlall_su,
                     ]
 
@@ -155,6 +179,7 @@ for lat_i, lat in enumerate(lai_data.lat.values):
                             "ssrd_winter", "ssrd_spring", "ssrd_summer",
                             "lai_winter", "lai_spring", "lai_summer", 
                             "vpd_winter", "vpd_spring", "vpd_summer",
+                            "sd_winter", "sd_spring", "sd_summer",
                             "swvlall_winter", "swvlall_spring", "swvlall_summer",
                             ]    
             

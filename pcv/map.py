@@ -183,7 +183,7 @@ class SEMMap(object):
             valE = self._get_piping_val(piping[0])
             for each_piping in piping[1:]:
                 valE += self._get_piping_val(each_piping)
-            max_min = 0.2
+            max_min = 1.0
         else:
             valE = self._get_piping_val(piping)
 

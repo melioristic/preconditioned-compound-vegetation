@@ -17,3 +17,5 @@
 # Place for all constants
 
 IPCC_REGION_SHPFILE = "/data/compoundx/IPCC-WGI-reference-regions-v4_shapefile/IPCC-WGI-reference-regions-v4.shp"
+
+CLIM_MASK_PATH = "/data/compoundx/anand/PCV/data/clim_mask/"

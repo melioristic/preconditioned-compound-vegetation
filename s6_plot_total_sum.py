@@ -33,23 +33,27 @@ for name in [name_1, name_2 ] :
     sem_map.group_clim(name, img_path = img_name)
 
 # piping_1 = "t2m_winter |> lai_spring |> lai_summer"
-piping_2 = "t2m_winter |> swvlall_winter |> swvlall_spring |> lai_spring |>  lai_summer"
-piping_3 = "t2m_winter |> swvlall_winter |> swvlall_spring |> lai_spring |> swvlall_summer |> lai_summer"
-piping_4 = "t2m_winter |> swvlall_winter |> swvlall_spring |> swvlall_summer |>  lai_summer"
+
+# piping_2 = "t2m_winter |> swvlall_winter |> swvlall_spring |> lai_spring |>  lai_summer"
+# piping_3 = "t2m_winter |> swvlall_winter |> swvlall_spring |> lai_spring |> swvlall_summer |> lai_summer"
+# piping_4 = "t2m_winter |> swvlall_winter |> swvlall_spring |> swvlall_summer |>  lai_summer"
 
 piping_5 = "tp_winter |> swvlall_winter |> swvlall_spring |> lai_spring |>  lai_summer"
 piping_6 = "tp_winter |> swvlall_winter |> swvlall_spring |> lai_spring |> swvlall_summer |> lai_summer"
 piping_7 = "tp_winter |> swvlall_winter |> swvlall_spring |> swvlall_summer |>  lai_summer"
 
+sem_map.path_map(piping=5, scratch_1.png)
+
 # piping_list_1 = [piping_1, piping_2, piping_3, piping_4]
-piping_list_1 = [piping_2, piping_3, piping_4]
-piping_list_2 = [piping_5, piping_6, piping_7]
+# piping_list_1 = [piping_2, piping_3, piping_4]
 
-for piping in piping_list_1:
-    sem_map.path_map(piping, "/data/compoundx/anand/PCV/images/"+ piping.replace(" ", "") + f"_{model_num}.png")
+# piping_list_2 = [piping_5, piping_6, piping_7]
 
-for piping in piping_list_2:
-    sem_map.path_map(piping, "/data/compoundx/anand/PCV/images/"+ piping.replace(" ", "") + f"_{model_num}.png")
+# # for piping in piping_list_1:
+# #     sem_map.path_map(piping, "/data/compoundx/anand/PCV/images/"+ piping.replace(" ", "") + f"_{model_num}.png")
 
-sem_map.path_map(piping_list_1, f"/data/compoundx/anand/PCV/images/t2m_winter_{model_num}.png")
-sem_map.path_map(piping_list_2, f"/data/compoundx/anand/PCV/images/tp_winter_{model_num}.png")
+# for piping in piping_list_2:
+#     sem_map.path_map(piping, "/data/compoundx/anand/PCV/images/"+ piping.replace(" ", "") + f"_{model_num}.png")
+
+# # sem_map.path_map(piping_list_1, f"/data/compoundx/anand/PCV/images/t2m_winter_{model_num}.png")
+# sem_map.path_map(piping_list_2, f"/data/compoundx/anand/PCV/images/tp_winter_{model_num}.png")
