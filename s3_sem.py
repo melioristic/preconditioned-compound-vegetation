@@ -101,7 +101,13 @@ elif model_num == 7:
     mod = mod_7
 elif model_num == 8:
     mod = mod_8
-    
+elif model_num == 9:
+    mod = mod_9
+elif model_num == 10:
+    mod = mod_10
+elif model_num == 11:
+    mod = mod_11
+
 model = sm.Model(mod)
 
 xr_dataset = create_xr_dataset(model, lai_data.lat, lai_data.lon)
@@ -114,16 +120,16 @@ for lat_i, lat in enumerate(lai_data.lat.values):
         model = sm.Model(mod)
         lai_w = lai_winter.GLOBMAP_LAI.sel(lon=lon, lat=lat).to_numpy()[1:-1]
         swvlall_w = swvlall_winter.swvlall.sel(longitude=lon, latitude=lat).to_numpy()[2:-1]
-        sd_w = sd_winter.sd.sel(longitude=lon, latitude=lat).to_numpy()[2:-1]
+        sd_sp = sd_spring.sd.sel(longitude=lon, latitude=lat).to_numpy()[2:-1]
 
         if np.isnan(lai_w).any() == True:
             pass
         elif np.isnan(swvlall_w).all() == True:
             pass
-        # elif np.isnan(sd_w).all() == True:
-        #     pass
+        elif np.nansum(sd_sp) == 0:
+            pass
         else:
-           
+
             
             # FOR LAI
             # taking winter of 1982 and not 1981 which is partial
