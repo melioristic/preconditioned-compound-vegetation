@@ -24,7 +24,7 @@ import matplotlib.pylab as plt
 import pandas as pd
 import numpy as np
 from pcv.ds import create_xr_dataset, fill_xr_dataset
-from pcv.models import *
+import pcv.models as models
 import time
 
 import argparse
@@ -40,7 +40,7 @@ t2m_path = "/data/compoundx/anand/PCV/data/detrended_seasonal_t2m.nc"
 tp_path = "/data/compoundx/anand/PCV/data/detrended_seasonal_tp.nc"
 ssrd_path = "/data/compoundx/anand/PCV/data/detrended_seasonal_ssrd.nc"
 lai_path = "/data/compoundx/anand/PCV/data/detrended_seasonal_lai.nc"
-swvlall_path = "/data/compoundx/anand/PCV/data/detrended_seasonal_swvlall.nc"
+swvlall_path = "/data/compoundx/anand/PCV/data/detrended_seasonal_smroot.nc"
 vpd_path = "/data/compoundx/anand/PCV/data/detrended_seasonal_vpd.nc"
 sd_path = "/data/compoundx/anand/PCV/data/detrended_seasonal_sd.nc"
 
@@ -83,30 +83,7 @@ sd_summer = select_data(sd_data,  "summer")
 
 ##### Section for everything about the model
 
-if model_num==1:
-    mod = mod_1
-elif model_num==2:
-    mod = mod_2
-elif model_num==20:
-    mod = mod_2_extended
-elif model_num==3:
-    mod = mod_3
-elif model_num==4:
-    mod = mod_4
-elif model_num == 5:
-    mod = mod_5
-elif model_num == 6:
-    mod = mod_6
-elif model_num == 7:
-    mod = mod_7
-elif model_num == 8:
-    mod = mod_8
-elif model_num == 9:
-    mod = mod_9
-elif model_num == 10:
-    mod = mod_10
-elif model_num == 11:
-    mod = mod_11
+mod = getattr(models, f"mod_{model_num}")
 
 model = sm.Model(mod)
 
@@ -118,88 +95,96 @@ for lat_i, lat in enumerate(lai_data.lat.values):
     for lon_i , lon in enumerate(lai_data.lon.values):
 
         model = sm.Model(mod)
-        lai_w = lai_winter.GLOBMAP_LAI.sel(lon=lon, lat=lat).to_numpy()[1:-1]
-        swvlall_w = swvlall_winter.swvlall.sel(longitude=lon, latitude=lat).to_numpy()[2:-1]
-        sd_sp = sd_spring.sd.sel(longitude=lon, latitude=lat).to_numpy()[2:-1]
+        lai_w = lai_winter.sel(lon=lon, lat=lat).to_numpy()
+        swvlall_w = swvlall_winter.sel(lon=lon, lat=lat).to_numpy()
+        swvlall_su = swvlall_summer.sel(lon=lon, lat=lat).to_numpy()
+        swvlall_sp = swvlall_spring.sel(lon=lon, lat=lat).to_numpy()
+        
+        sd_sp = sd_spring.sel(longitude=lon, latitude=lat).to_numpy()
 
         if np.isnan(lai_w).any() == True:
             pass
         elif np.isnan(swvlall_w).all() == True:
             pass
+        elif np.isnan(swvlall_su).all() == True:
+            pass
+        elif np.isnan(swvlall_sp).all() == True:
+            pass
         elif np.nansum(sd_sp) == 0:
             pass
+        # elif np.nansum(swvlall_w) < 1e-10:
+        #     pass
+        # elif np.nansum(swvlall_su) < 1e-10:
+        #     pass
+        # elif np.nansum(swvlall_sp) < 1e-10:
+        #     pass
         else:
-
             
-            # FOR LAI
-            # taking winter of 1982 and not 1981 which is partial
-            # subsequently we leave the last year
-            # Account for 1 more year because of the DJA problem 
+            try:
 
-            # From 1982 winter to 
-            lai_w = lai_winter.GLOBMAP_LAI.sel(lon=lon, lat=lat).to_numpy()[1:-1]
-            # now take spring and summer from 1983 (following year)
-            lai_sp = lai_spring.GLOBMAP_LAI.sel(lon=lon, lat=lat).to_numpy()[:-1]
-            lai_su = lai_summer.GLOBMAP_LAI.sel(lon=lon, lat=lat).to_numpy()[:-1]
+                lai_w = lai_winter.sel(lon=lon, lat=lat).to_numpy()
+                lai_sp = lai_spring.sel(lon=lon, lat=lat).to_numpy()                
+                lai_su = lai_summer.sel(lon=lon, lat=lat).to_numpy()
+                # FOR CLIMATE
+                # We have an extra year for climate data, thus need to shift with a +1
+                t2m_w = t2m_winter.sel(longitude=lon, latitude=lat).to_numpy()
+                t2m_sp = t2m_spring.sel(longitude=lon, latitude=lat).to_numpy()
+                t2m_su = t2m_summer.sel(longitude=lon, latitude=lat).to_numpy()
 
-            # FOR CLIMATE
-            # We have an extra year for climate data, thus need to shift with a +1
-            t2m_w = t2m_winter.t2m.sel(longitude=lon, latitude=lat).to_numpy()[2:-1]
-            t2m_sp = t2m_spring.t2m.sel(longitude=lon, latitude=lat).to_numpy()[1:-1]
-            t2m_su = t2m_summer.t2m.sel(longitude=lon, latitude=lat).to_numpy()[1:-1]
+                tp_w = tp_winter.sel(longitude=lon, latitude=lat).to_numpy()
+                tp_sp = tp_spring.sel(longitude=lon, latitude=lat).to_numpy()
+                tp_su = tp_summer.sel(longitude=lon, latitude=lat).to_numpy()
+                
+                ssrd_w = ssrd_winter.sel(longitude=lon, latitude=lat).to_numpy()
+                ssrd_sp = ssrd_spring.sel(longitude=lon, latitude=lat).to_numpy()
+                ssrd_su = ssrd_summer.sel(longitude=lon, latitude=lat).to_numpy()
 
-            tp_w = tp_winter.tp.sel(longitude=lon, latitude=lat).to_numpy()[2:-1]
-            tp_sp = tp_spring.tp.sel(longitude=lon, latitude=lat).to_numpy()[1:-1]
-            tp_su = tp_summer.tp.sel(longitude=lon, latitude=lat).to_numpy()[1:-1]
+                vpd_w = vpd_winter.sel(longitude=lon, latitude=lat).to_numpy()
+                vpd_sp = vpd_spring.sel(longitude=lon, latitude=lat).to_numpy()
+                vpd_su = vpd_summer.sel(longitude=lon, latitude=lat).to_numpy()
+
+                sd_w = sd_winter.sel(longitude=lon, latitude=lat).to_numpy()
+                sd_sp = sd_spring.sel(longitude=lon, latitude=lat).to_numpy()
+                sd_su = sd_summer.sel(longitude=lon, latitude=lat).to_numpy()
+
+                swvlall_w = swvlall_winter.sel(lon=lon, lat=lat).to_numpy()
+                swvlall_sp = swvlall_spring.sel(lon=lon, lat=lat).to_numpy()
+                swvlall_su = swvlall_summer.sel(lon=lon, lat=lat).to_numpy()
+
+
+                assert t2m_w.shape == t2m_sp.shape == t2m_su.shape
+                
+                list_val = [t2m_w, t2m_sp, t2m_su,
+                        tp_w, tp_sp, tp_su, 
+                        ssrd_w, ssrd_sp, ssrd_su, 
+                        lai_w, lai_sp, lai_su,
+                        vpd_w, vpd_sp, vpd_su,
+                        sd_w, sd_sp, sd_su,
+                        swvlall_w, swvlall_sp, swvlall_su,
+                        ]
+
+                col_names = ["t2m_winter", "t2m_spring", "t2m_summer",
+                                "tp_winter", "tp_spring", "tp_summer",
+                                "ssrd_winter", "ssrd_spring", "ssrd_summer",
+                                "lai_winter", "lai_spring", "lai_summer", 
+                                "vpd_winter", "vpd_spring", "vpd_summer",
+                                "sd_winter", "sd_spring", "sd_summer",
+                                "swvlall_winter", "swvlall_spring", "swvlall_summer",
+                                ]    
+                
+                data = np.vstack(list_val).T
+
+                df = pd.DataFrame(data, columns=col_names)
+                df=(df-df.mean())/df.std()
+                model.fit(df)
+                chi2p = sm.calc_stats(model)["chi2 p-value"][0]
+                xr_dataset = fill_xr_dataset(xr_dataset, model.inspect(), chi2p, lat_i, lon_i)
             
-            ssrd_w = ssrd_winter.ssrd.sel(longitude=lon, latitude=lat).to_numpy()[2:-1]
-            ssrd_sp = ssrd_spring.ssrd.sel(longitude=lon, latitude=lat).to_numpy()[1:-1]
-            ssrd_su = ssrd_summer.ssrd.sel(longitude=lon, latitude=lat).to_numpy()[1:-1]
-
-            vpd_w = vpd_winter.vpd_cf.sel(longitude=lon, latitude=lat).to_numpy()[2:-1]
-            vpd_sp = vpd_spring.vpd_cf.sel(longitude=lon, latitude=lat).to_numpy()[1:-1]
-            vpd_su = vpd_summer.vpd_cf.sel(longitude=lon, latitude=lat).to_numpy()[1:-1]
-
-            sd_w = sd_winter.sd.sel(longitude=lon, latitude=lat).to_numpy()[2:-1]
-            sd_sp = sd_spring.sd.sel(longitude=lon, latitude=lat).to_numpy()[1:-1]
-            sd_su = sd_summer.sd.sel(longitude=lon, latitude=lat).to_numpy()[1:-1]
-
-            swvlall_w = swvlall_winter.swvlall.sel(longitude=lon, latitude=lat).to_numpy()[2:-1]
-            swvlall_sp = swvlall_spring.swvlall.sel(longitude=lon, latitude=lat).to_numpy()[1:-1]
-            swvlall_su = swvlall_summer.swvlall.sel(longitude=lon, latitude=lat).to_numpy()[1:-1]
-
-
-            assert t2m_w.shape == t2m_sp.shape == t2m_su.shape
-            
-            list_val = [t2m_w, t2m_sp, t2m_su,
-                    tp_w, tp_sp, tp_su, 
-                    ssrd_w, ssrd_sp, ssrd_su, 
-                    lai_w, lai_sp, lai_su,
-                    vpd_w, vpd_sp, vpd_su,
-                    sd_w, sd_sp, sd_su,
-                    swvlall_w, swvlall_sp, swvlall_su,
-                    ]
-
-            col_names = ["t2m_winter", "t2m_spring", "t2m_summer",
-                            "tp_winter", "tp_spring", "tp_summer",
-                            "ssrd_winter", "ssrd_spring", "ssrd_summer",
-                            "lai_winter", "lai_spring", "lai_summer", 
-                            "vpd_winter", "vpd_spring", "vpd_summer",
-                            "sd_winter", "sd_spring", "sd_summer",
-                            "swvlall_winter", "swvlall_spring", "swvlall_summer",
-                            ]    
-            
-            data = np.vstack(list_val).T
-
-            df = pd.DataFrame(data, columns=col_names)
-            df=(df-df.mean())/df.std()
-            model.fit(df)
-            chi2p = sm.calc_stats(model)["chi2 p-value"][0]
-            xr_dataset = fill_xr_dataset(xr_dataset, model.inspect(), chi2p, lat_i, lon_i)
-
+            except:
+                pass
 
     print(f"Time taken for lat {lat_i} is {(time.time()-strt_time):.2f} seconds.")
 
-xr_dataset.to_netcdf(f"/data/compoundx/anand/PCV/data/sem_data_{model_num}.nc")
+xr_dataset.to_netcdf(f"/data/compoundx/anand/PCV/data/sem_data_{model_num}_gleam.nc")
 print(f"Total time {(time.time()-init_time):.2f} seconds.")
 

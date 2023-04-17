@@ -138,14 +138,21 @@ def select_data(data:xr.Dataset, season:str)->xr.Dataset:
     assert season in season_list, "Seasons can only be : winter, spring, summer or autumn"
     month = -1
     if season == "winter":
+        time_window = slice("1982", "2019")
         month=12
     elif season=="spring":
+        time_window = slice("1983", "2020")
         month=3
     elif season=="summer":
+        time_window = slice("1983", "2020")
         month=6
     elif season=="autumn":
+        time_window = slice("1983", "2020")
         month=9
-    return data.where(data["time.month"]==month, drop=True).sortby("time")
+    
+    data = data.where(data["time.month"]==month, drop=True).sortby("time")
+
+    return data[[i for i in data.keys()][0]].sel(time=time_window)  
 
 
 def regrid_data(data, interp_like_data):
