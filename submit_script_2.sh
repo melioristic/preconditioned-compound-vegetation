@@ -3,7 +3,7 @@
 #SBATCH --job-name=log
 #SBATCH --time=0-01:30:00
 #SBATCH --mem-per-cpu=4G
-#SBATCH --cpus-per-task=4
+#SBATCH --cpus-per-task=1
 
 # output files
 #SBATCH -o log.out
