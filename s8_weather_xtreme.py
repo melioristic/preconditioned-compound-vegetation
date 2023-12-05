@@ -12,7 +12,6 @@ xtreme = "high"
 
 root_folder = Path("/data/compoundx/anand/PCV/data/")
 
-
 def clf_estimator(train_data, val_data, winter=True):
     Y = np.int8(train_data[:, -1])
     if winter:
@@ -35,8 +34,7 @@ def norm(arr):
 csv_folder = root_folder / f"{vegetation_type}_data" / xtreme
 
 for region_fdir in csv_folder.iterdir():
-    if ".csv" in str(region_fdir):
-
+    if ("_v7.csv" in str(region_fdir)) and ("logreg" not in str(region_fdir)):
         print(f"Working for region {region_fdir}")
         #year 0 # t2m_winter 1	tp_winter 2	sm_winter 3	
         # t2m_spring 4 tp_spring 5 sm_spring 6 lai_spring 7	
@@ -44,12 +42,12 @@ for region_fdir in csv_folder.iterdir():
 
         # only take weather colums
 
-        keep_col_index = [1, 2, 4, 5, 8, 9, 11]
+        keep_col_index = [1, 2, 5, 6, 10, 11, 14]
         train_data, val_data, test_data = read_ipcc_region_csv(region_fdir)        
         train_data = train_data[:,keep_col_index, 0]
         val_data = val_data[:,keep_col_index, 0]
         test_data = test_data[:,keep_col_index, 0]
-
+        print(train_data.shape)
         X = norm(train_data[:, :6])
         Y = train_data[:, -1]
         xtreme_X = X[Y==1]

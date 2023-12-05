@@ -9,6 +9,8 @@
 import numpy as np
 import xarray as xr
 from pcv.misc import timeit
+from typing import List, Tuple
+
 
 def comp_area_lat_lon(lat:np.array,lon:np.array)->np.array:
     """Calculate the area between an array of lat lons
@@ -152,7 +154,7 @@ def select_data(data:xr.Dataset, season:str)->xr.Dataset:
     
     data = data.where(data["time.month"]==month, drop=True).sortby("time")
 
-    return data[[i for i in data.keys()][0]].sel(time=time_window)  
+    return data[[i for i in data.keys()][0]].sel(time=time_window) .sortby("latitude", ascending=False) 
 
 
 def regrid_data(data, interp_like_data):
@@ -181,6 +183,27 @@ def regrid_data(data, interp_like_data):
         
     return regridded_data
 
+
+def mask_crop_forest(lu_mc_1:xr.DataArray) -> Tuple[np.array, np.array]:
+    """Masks crops and forest regions based on the land use map for multiple years.
+    Only the years which have been crops or forest for all the years are considered.
+
+    Args:
+        lu_mc_1 (xr.DataArray): The datarray with land use class on lon lat and time dimension
+
+    Returns:
+        Tuple[np.array, np.array]: Array of crops and forests masks
+    """
+
+
+    last_year_lu = lu_mc_1
+    
+    n_year = last_year_lu.shape[0]
+    mask_forest = (((last_year_lu>=40).sum("time") == n_year) & (((last_year_lu<110).sum("time") == n_year)))
+    mask_crop = (((last_year_lu>=10).sum("time") == n_year) & (((last_year_lu<40).sum("time") == n_year)))
+
+    # return mask_crop.values, mask_forest.values
+    return mask_crop.values, mask_forest.values
 
 ## NEED TO IMPROVE regridding to make it a more generic function 
 

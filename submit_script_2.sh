@@ -10,10 +10,10 @@
 #SBATCH -e log.err
 
 ml purge
-ml load GCC/10.2.0  OpenMPI/4.0.5
-ml load netCDF/4.7.4
-ml load GEOS/3.9.1
+ml load GCC/12.2.0  OpenMPI/4.1.4
+ml load netCDF/4.9.0
+ml load GEOS/3.11.1
 module load Anaconda3
 source activate pcv
 
-python s8_weather_xtreme.py
+~/.conda/envs/pcv/bin/python s8_weather_xtreme.py
