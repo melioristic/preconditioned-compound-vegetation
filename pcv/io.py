@@ -51,16 +51,17 @@ def majority_class_1_landuse(lon:List, lat:List)->xr.DataArray:
     """
     val = []
     for i in range(1992, 2019):
-        data = read_land_use(i)
-        val.append(data.sel(lat = lat, lon = lon).majority_class_1.data)
+        if i!=2014:
+            data = read_land_use(i)
+            val.append(data.sel(lat = lat, lon = lon).majority_class_1.data)
 
     majority_class_1 = np.stack(val)
 
     lu_mc_1 = xr.DataArray(
-        majority_class_1, dims = ["time", "lat", "lon"], coords = {
-            "time" : np.arange(1992, 2019),
-            "lat" : lat,
-            "lon" : lon,
+        majority_class_1, dims = ["time", "latitude", "longitude"], coords = {
+            "time" : np.concatenate([np.arange(1992, 2014), np.arange(2015, 2019)]),
+            "latitude" : lat,
+            "longitude" : lon,
         }
     )
     return lu_mc_1

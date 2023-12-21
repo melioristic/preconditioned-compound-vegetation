@@ -1,0 +1,736 @@
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:79: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  winter_coefficient[n, 0] = clf.intercept_
+/gpfs1/schlecker/home/anand/Projects/preconditioned-compound-vegetation/s8_weather_xtreme.py:88: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  coefficient[n, 0] = clf.intercept_
