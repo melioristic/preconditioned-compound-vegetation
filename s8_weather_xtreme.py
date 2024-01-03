@@ -29,11 +29,11 @@ def clf_estimator(train_data, val_data, winter=True):
 def norm(arr):
     return ((arr - arr.mean(axis=0))/arr.std(axis=0))
 
-
 csv_folder = root_folder / f"{vegetation_type}_data" / xtreme
 
+version = "v3"
 for region_fdir in csv_folder.iterdir():
-    if ("_v7.csv" in str(region_fdir)) and ("logreg" not in str(region_fdir)):
+    if (f"_{version}.csv" in str(region_fdir)) and ("logreg" not in str(region_fdir)):
         print(f"Working for region {region_fdir}")
         #year 0 # t2m_winter 1 tp_winter 2	sm_winter 3	sd_winter 4
         # t2m_sp 5 tp_sp 6 sm_sp 7 sd_sp 8 lai_sp 9 	
@@ -42,10 +42,11 @@ for region_fdir in csv_folder.iterdir():
         # only take weather colums
 
         keep_col_index = [1, 2, 5, 6, 10, 11, 14]
-        train_data, val_data, test_data = read_ipcc_region_csv(region_fdir)        
+        train_data, test_data = read_ipcc_region_csv(region_fdir)        
         train_data = train_data[:,keep_col_index, 0]
-        val_data = val_data[:,keep_col_index, 0]
         test_data = test_data[:,keep_col_index, 0]
+        train_data[~np.isnan(train_data).any(axis=1), :]
+        test_data[~np.isnan(test_data).any(axis=1), :]
         
         X = norm(train_data[:, :6])
         Y = train_data[:, -1]
@@ -68,11 +69,11 @@ for region_fdir in csv_folder.iterdir():
             winter_coefficient = np.zeros((100, 8))
             coefficient = np.zeros((100,6))
             for n in range(100):
-                train_data, val_data, test_data = read_ipcc_region_csv(region_fdir)        
+                train_data, test_data = read_ipcc_region_csv(region_fdir)        
                 train_data = train_data[:,keep_col_index, 0]
-                val_data = val_data[:,keep_col_index, 0]
+                # val_data = val_data[:,keep_col_index, 0]
                 test_data = test_data[:,keep_col_index, 0]
-                clf, X, Y = clf_estimator(train_data, val_data, winter=True)
+                clf, X, Y = clf_estimator(train_data, test_data, winter=True)
                 Y_score = clf.predict_proba(X)[:,1]
                 auc = roc_auc_score(Y, Y_score)
                 auc_winter.append(auc)
@@ -80,7 +81,7 @@ for region_fdir in csv_folder.iterdir():
                 winter_coefficient[n, 1:7] = clf.coef_
                 winter_coefficient[n, 7] = auc
 
-                clf, X, Y = clf_estimator(train_data, val_data, winter=False)
+                clf, X, Y = clf_estimator(train_data, test_data, winter=False)
                 Y_score = clf.predict_proba(X)[:,1]
                 auc = roc_auc_score(Y, Y_score)
                 auc_without_winter.append(auc)
@@ -89,8 +90,8 @@ for region_fdir in csv_folder.iterdir():
                 coefficient[n, 1:5] = clf.coef_
                 coefficient[n, 5] = auc
 
-                RocCurveDisplay.from_estimator(*clf_estimator(train_data, val_data, winter=True) , ax=axes[1],**{"color":"r", "alpha":0.2} )
-                RocCurveDisplay.from_estimator(*clf_estimator(train_data, val_data, winter=False) , ax=axes[1],**{"color":"b", "alpha":0.2} )
+                RocCurveDisplay.from_estimator(*clf_estimator(train_data, test_data, winter=True) , ax=axes[1],**{"color":"r", "alpha":0.2} )
+                RocCurveDisplay.from_estimator(*clf_estimator(train_data, test_data, winter=False) , ax=axes[1],**{"color":"b", "alpha":0.2} )
                 
                 axes[1].get_legend().remove()
 
@@ -99,8 +100,8 @@ for region_fdir in csv_folder.iterdir():
             header_1 = "a0\tt2m_winter\ttp_winter\tt2m_spring\ttp_spring\tt2m_summer\ttp_summer\tAUC"
             header_2 = "a0\tt2m_spring\ttp_spring\tt2m_summer\ttp_summer\tAUC"
 
-            np.savetxt(f"/data/compoundx/anand/PCV/data/{vegetation_type}_data/{xtreme}/logreg_winter_{xtreme}_{region}.csv", winter_coefficient, fmt='%1.3f', delimiter="\t", header=header_1)
-            np.savetxt(f"/data/compoundx/anand/PCV/data/{vegetation_type}_data/{xtreme}/logreg_{xtreme}_{region}.csv", coefficient, fmt='%1.3f', delimiter="\t", header=header_2)
+            np.savetxt(f"/data/compoundx/anand/PCV/data/{vegetation_type}_data/{xtreme}/logreg_winter_{region}.csv", winter_coefficient, fmt='%1.3f', delimiter="\t", header=header_1)
+            np.savetxt(f"/data/compoundx/anand/PCV/data/{vegetation_type}_data/{xtreme}/logreg_{region}.csv", coefficient, fmt='%1.3f', delimiter="\t", header=header_2)
             
             axes[2].hist(auc_winter, color = "red", bins=20, alpha=0.5)
             axes[2].hist(auc_without_winter, color="blue", bins=20, alpha=0.5)

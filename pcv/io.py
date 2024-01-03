@@ -19,12 +19,10 @@ from pcv.cfg import IPCC_REGION_SHPFILE
 def read_ipcc_region_csv(path) -> None:
     
     data = np.loadtxt(path)
-    data = data[~np.isnan(data).any(axis=1), :][:,:,np.newaxis]
+    data =data[:,:,np.newaxis]
     train_data, test_data = train_test_split(data, test_size=0.1, train_size=0.9, shuffle=True)
-
-    train_data, val_data = train_test_split(train_data, test_size=0.1, train_size=0.9, shuffle=True)
         
-    return train_data, val_data, test_data
+    return train_data, test_data
 
 def read_clim_mask(mask_path = "/data/compoundx/anand/PCV/data/clim_mask/" )-> Tuple[List, List]:
     clim_files = [mask_path + file for file in os.listdir(mask_path) if ".npy" in file ]

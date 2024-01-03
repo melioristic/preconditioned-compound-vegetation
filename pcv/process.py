@@ -92,7 +92,7 @@ def detrend(data:xr.Dataset, deg:int)->xr.Dataset:
     return data - fit
 
 @timeit
-def detrend_seasons(data:xr.Dataset, deg:int)->xr.Dataset:
+def detrend_seasons(data:xr.Dataset, deg:int, standardise=True)->xr.Dataset:
     """Detrend dataset seasonaly, relies on `detrend`
     #LIMITATION
         Will only workd for xarray dataset with 1 variables
@@ -112,10 +112,26 @@ def detrend_seasons(data:xr.Dataset, deg:int)->xr.Dataset:
     # Depends on the way in which data is aggregated. Here there are 4 seasons
     # DJF, MAM, JJA, SON and the time associated is the first day of the season
     # Thus season months are 3, 6, 9, 12
+    
+    
 
     for month in range(3,13,3):
-        seasonal_data = data.where(data["time.month"]==month, drop=True) #select month
+
+        if month == 12:
+            time_window = slice("1982", "2019")
+        elif month ==3 :
+            time_window = slice("1983", "2020")
+        elif month == 6:
+            time_window = slice("1983", "2020")
+        elif month == 9:
+            time_window = slice("1983", "2020")
+    
+        seasonal_data = data.where(data["time.month"]==month, drop=True).sel(time=time_window) #select month #select year to fit the data
         detrended_season = detrend(seasonal_data, deg) # detrend data
+        
+        if standardise:
+            detrended_season = detrended_season/detrended_season.std("time")
+        
         data_list.append(detrended_season)
     
     return xr.concat(data_list, dim="time").sortby("time")
@@ -133,7 +149,7 @@ def aggregate_seasons(data:xr.Dataset)->xr.Dataset:
     aggregate = data.resample({"time":"QS-DEC"}).mean()
     return aggregate
 
-def select_data(data:xr.Dataset, season:str)->xr.Dataset:
+def select_data(data:xr.Dataset, season:str, unit_variance=True)->xr.Dataset:
     
     season_list = ["winter", "spring", "summer", "autumn"]
     
@@ -152,9 +168,14 @@ def select_data(data:xr.Dataset, season:str)->xr.Dataset:
         time_window = slice("1983", "2020")
         month=9
     
+    data = data[[i for i in data.keys()][0]].sel(time=time_window) .sortby("latitude", ascending=False)
     data = data.where(data["time.month"]==month, drop=True).sortby("time")
+    
+    if unit_variance:
+        data = data/data.std('time')
+    return data
 
-    return data[[i for i in data.keys()][0]].sel(time=time_window) .sortby("latitude", ascending=False) 
+
 
 
 def regrid_data(data, interp_like_data):
