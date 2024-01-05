@@ -1,24 +1,14 @@
+/home/anand/.conda/envs/PCV310/lib/python3.10/site-packages/numpy/lib/nanfunctions.py:1741: RuntimeWarning: invalid value encountered in subtract
+  np.subtract(arr, avg, out=arr, casting='unsafe', where=where)
 /home/anand/.conda/envs/PCV310/lib/python3.10/site-packages/numpy/lib/nanfunctions.py:1879: RuntimeWarning: Degrees of freedom <= 0 for slice.
   var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/anand/.conda/envs/PCV310/lib/python3.10/site-packages/numpy/lib/nanfunctions.py:1741: RuntimeWarning: invalid value encountered in subtract
+  np.subtract(arr, avg, out=arr, casting='unsafe', where=where)
 /home/anand/.conda/envs/PCV310/lib/python3.10/site-packages/numpy/lib/nanfunctions.py:1879: RuntimeWarning: Degrees of freedom <= 0 for slice.
   var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/anand/.conda/envs/PCV310/lib/python3.10/site-packages/numpy/lib/nanfunctions.py:1741: RuntimeWarning: invalid value encountered in subtract
+  np.subtract(arr, avg, out=arr, casting='unsafe', where=where)
 /home/anand/.conda/envs/PCV310/lib/python3.10/site-packages/numpy/lib/nanfunctions.py:1879: RuntimeWarning: Degrees of freedom <= 0 for slice.
   var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
-/home/anand/.conda/envs/PCV310/lib/python3.10/site-packages/numpy/lib/nanfunctions.py:1879: RuntimeWarning: Degrees of freedom <= 0 for slice.
-  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
-/home/anand/.conda/envs/PCV310/lib/python3.10/site-packages/xarray/core/nputils.py:222: RankWarning: Polyfit may be poorly conditioned
-  warn_on_deficient_rank(rank, x.shape[1])
-/home/anand/.conda/envs/PCV310/lib/python3.10/site-packages/numpy/lib/nanfunctions.py:1879: RuntimeWarning: Degrees of freedom <= 0 for slice.
-  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
-/home/anand/.conda/envs/PCV310/lib/python3.10/site-packages/xarray/core/nputils.py:222: RankWarning: Polyfit may be poorly conditioned
-  warn_on_deficient_rank(rank, x.shape[1])
-/home/anand/.conda/envs/PCV310/lib/python3.10/site-packages/numpy/lib/nanfunctions.py:1879: RuntimeWarning: Degrees of freedom <= 0 for slice.
-  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
-/home/anand/.conda/envs/PCV310/lib/python3.10/site-packages/xarray/core/nputils.py:222: RankWarning: Polyfit may be poorly conditioned
-  warn_on_deficient_rank(rank, x.shape[1])
-/home/anand/.conda/envs/PCV310/lib/python3.10/site-packages/numpy/lib/nanfunctions.py:1879: RuntimeWarning: Degrees of freedom <= 0 for slice.
-  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
-/home/anand/.conda/envs/PCV310/lib/python3.10/site-packages/xarray/core/nputils.py:222: RankWarning: Polyfit may be poorly conditioned
-  warn_on_deficient_rank(rank, x.shape[1])
-/home/anand/.conda/envs/PCV310/lib/python3.10/site-packages/numpy/lib/nanfunctions.py:1879: RuntimeWarning: Degrees of freedom <= 0 for slice.
-  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/anand/.conda/envs/PCV310/lib/python3.10/site-packages/numpy/lib/nanfunctions.py:1563: RuntimeWarning: All-NaN slice encountered
+  return function_base._ureduce(a,

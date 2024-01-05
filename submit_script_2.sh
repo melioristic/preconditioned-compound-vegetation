@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name=log
-#SBATCH --time=0-02:30:00
+#SBATCH --time=0-00:30:00
 #SBATCH --mem-per-cpu=4G
 #SBATCH --cpus-per-task=1
 

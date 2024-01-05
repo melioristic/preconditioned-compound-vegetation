@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name=v3
-#SBATCH --time=0-00:30:00
+#SBATCH --time=0-00:40:00
 #SBATCH --mem-per-cpu=8G
 #SBATCH --cpus-per-task=1
 
@@ -16,4 +16,4 @@ ml purge
 module load Anaconda3
 source activate PCV310
 
-~/.conda/envs/PCV310/bin/python s2_save_seasonal_data.py
+~/.conda/envs/PCV310/bin/python s11_log_reg.py -v crop -x high

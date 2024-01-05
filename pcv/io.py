@@ -16,11 +16,11 @@ from cartopy.feature import ShapelyFeature
 import cartopy.io.shapereader as shpreader
 from pcv.cfg import IPCC_REGION_SHPFILE
 
-def read_ipcc_region_csv(path) -> None:
+def read_ipcc_region_csv(path, train_frac=0.9) -> None:
     
     data = np.loadtxt(path)
     data =data[:,:,np.newaxis]
-    train_data, test_data = train_test_split(data, test_size=0.1, train_size=0.9, shuffle=True)
+    train_data, test_data = train_test_split(data, test_size=1-train_frac, train_size=train_frac, shuffle=True)
         
     return train_data, test_data
 

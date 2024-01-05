@@ -31,7 +31,7 @@ def norm(arr):
 
 csv_folder = root_folder / f"{vegetation_type}_data" / xtreme
 
-version = "v3"
+version = "v4"
 for region_fdir in csv_folder.iterdir():
     if (f"_{version}.csv" in str(region_fdir)) and ("logreg" not in str(region_fdir)):
         print(f"Working for region {region_fdir}")
@@ -41,15 +41,18 @@ for region_fdir in csv_folder.iterdir():
 
         # only take weather colums
 
+        train_frac = 0.9
+        
         keep_col_index = [1, 2, 5, 6, 10, 11, 14]
-        train_data, test_data = read_ipcc_region_csv(region_fdir)        
+        train_data, test_data = read_ipcc_region_csv(region_fdir, train_frac)        
         train_data = train_data[:,keep_col_index, 0]
         test_data = test_data[:,keep_col_index, 0]
         train_data[~np.isnan(train_data).any(axis=1), :]
         test_data[~np.isnan(test_data).any(axis=1), :]
         
-        X = norm(train_data[:, :6])
-        Y = train_data[:, -1]
+        data = np.vstack([train_data, test_data])
+        X = data[:, :6]
+        Y = data[:, -1]
         xtreme_X = X[Y==1]
         labels =  [" " , "t2m_winter", 	"tp_winter", 	"t2m_spring",	"tp_spring", 	"t2m_summer",	"tp_summer"]
 
@@ -69,10 +72,14 @@ for region_fdir in csv_folder.iterdir():
             winter_coefficient = np.zeros((100, 8))
             coefficient = np.zeros((100,6))
             for n in range(100):
-                train_data, test_data = read_ipcc_region_csv(region_fdir)        
+                train_data, test_data = read_ipcc_region_csv(region_fdir, train_frac=train_frac)        
                 train_data = train_data[:,keep_col_index, 0]
                 # val_data = val_data[:,keep_col_index, 0]
                 test_data = test_data[:,keep_col_index, 0]
+
+                train_data[~np.isnan(train_data).any(axis=1), :]
+                test_data[~np.isnan(test_data).any(axis=1), :]
+
                 clf, X, Y = clf_estimator(train_data, test_data, winter=True)
                 Y_score = clf.predict_proba(X)[:,1]
                 auc = roc_auc_score(Y, Y_score)
