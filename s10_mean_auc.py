@@ -6,7 +6,7 @@ from pcv.io import read_ipcc_region_csv
 from pathlib import Path
 from sklearn.metrics import roc_auc_score
 
-vegetation_type = "forest"
+vegetation_type = "crop"
 xtreme = "high"
 
 root_folder = Path("/data/compoundx/anand/PCV/data/")
@@ -29,6 +29,7 @@ header = []
 
 auc_winter = []
 auc_without_winter = []
+n_pixel = []
 for region_fdir in csv_folder.iterdir():
     if (f"_{version}.csv" in str(region_fdir)) and ("logreg" not in str(region_fdir)):
         print(f"Working for region {region_fdir}")
@@ -71,8 +72,11 @@ for region_fdir in csv_folder.iterdir():
         Y_score = clf_est[0].predict_proba(X[:,2:6])[:,1]
         auc_without_winter.append(roc_auc_score(Y, Y_score))
 
+
         RocCurveDisplay.from_estimator(*clf_est_w , ax=axes[1], **{"color":"r", "alpha":0.5})
         RocCurveDisplay.from_estimator(*clf_est , ax=axes[1], **{"color":"b", "alpha":0.5})
+
+        n_pixel.append(int(data.shape[0]))
 
         region = str(region_fdir).split("/")[-1][:-4]
         header.append(region)
@@ -83,10 +87,7 @@ for region_fdir in csv_folder.iterdir():
         plt.savefig(f"/data/compoundx/anand/PCV/images/{vegetation_type}/{xtreme}/weather_train_{xtreme}_{region}.png")
         plt.close()
 
-    
-    auc = np.stack([auc_without_winter, auc_winter])
-
-
+data = np.stack([auc_without_winter, auc_winter, n_pixel])
 
 header = "".join([each+"\t" for each in header])
-np.savetxt(f"/data/compoundx/anand/PCV/data/{vegetation_type}_data/{xtreme}/auc_{region}.csv",auc , fmt='%1.3f', delimiter="\t", header=header)
+np.savetxt(f"/data/compoundx/anand/PCV/data/{vegetation_type}_data/{xtreme}/auc_{vegetation_type}_{xtreme}_{version}.csv", data , fmt='%1.3f', delimiter="\t", header=header)

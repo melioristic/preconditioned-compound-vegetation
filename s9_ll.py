@@ -1,14 +1,12 @@
 import numpy as np
 from sklearn.linear_model import LogisticRegression
-import matplotlib.pyplot as plt
-from sklearn.metrics import RocCurveDisplay
 from pcv.io import read_ipcc_region_csv
 from pathlib import Path
 from sklearn.metrics import roc_auc_score
 from sklearn.metrics import log_loss
 from scipy.stats.distributions import chi2
 
-vegetation_type = "crop"
+vegetation_type = "forest"
 xtreme = "low"
 
 root_folder = Path("/data/compoundx/anand/PCV/data/")
@@ -57,16 +55,6 @@ for region_fdir in csv_folder.iterdir():
         xtreme_X = X[Y==1]
         labels =  [" " , "t2m_winter", 	"tp_winter", 	"t2m_spring",	"tp_spring", 	"t2m_summer",	"tp_summer"]
 
-        fig, axes = plt.subplots(1,3, figsize = (12,6))
-        x_axis = np.arange(7)
-        axes[0].boxplot(xtreme_X, showfliers = False, notch=True)
-        axes[0].set_xticks(np.arange(7))
-        axes[0].axhline(xmin=0, xmax=7, color = "r", linestyle="--")
-        axes[0].set_xticklabels(labels, rotation=90)
-
-        # PrecisionRecallDisplay.from_estimator(*clf_estimator(train_data, val_data, winter=True) , ax=axes[2], **{"color":"r", "alpha":0.5})
-        # PrecisionRecallDisplay.from_estimator(*clf_estimator(train_data, val_data, winter=False) , ax=axes[2], **{"color":"b", "alpha":0.5})
-        
         ## 
         LL1 = get_ll(X, winter=False)
         LL2 = get_ll(X, winter=True)
